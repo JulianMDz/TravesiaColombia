@@ -11,16 +11,16 @@ TagManager:
   - 
   - Water
   - UI
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
+  - Background_Far
+  - 'Background_Mid  '
+  - Background_Near
+  - Terrain
+  - Enemies
+  - Player
+  - VFX
+  - UI
+  - Ground
+  - Enemy
   - 
   - 
   - 
@@ -64,6 +64,9 @@ TagManager:
     locked: 0
   - name: UI
     uniqueID: 195351327
+    locked: 0
+  - name: Ground
+    uniqueID: 4034615705
     locked: 0
   m_RenderingLayers:
   - Default

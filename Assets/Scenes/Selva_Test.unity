@@ -262,8 +262,16 @@ PrefabInstance:
       value: Camino (11)
       objectReference: {fileID: 0}
     - target: {fileID: 1961818923929140389, guid: c87ffd3d1e8c4ab49a446347f706a422, type: 3}
+      propertyPath: m_Layer
+      value: 14
+      objectReference: {fileID: 0}
+    - target: {fileID: 1961818923929140389, guid: c87ffd3d1e8c4ab49a446347f706a422, type: 3}
       propertyPath: m_IsActive
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4915479674179997424, guid: c87ffd3d1e8c4ab49a446347f706a422, type: 3}
+      propertyPath: m_Layer
+      value: 14
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -1062,6 +1070,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1930970150}
     m_Modifications:
+    - target: {fileID: 3514875982397117241, guid: 452ac13bae1c1f64c979b1277ae111b2, type: 3}
+      propertyPath: m_Layer
+      value: 14
+      objectReference: {fileID: 0}
     - target: {fileID: 8392879694812404215, guid: 452ac13bae1c1f64c979b1277ae111b2, type: 3}
       propertyPath: m_LocalScale.x
       value: 70.701675
@@ -1115,6 +1127,10 @@ PrefabInstance:
       value: Sendero_lateral_camino_01 (35)
       objectReference: {fileID: 0}
     - target: {fileID: 9165580820555072333, guid: 452ac13bae1c1f64c979b1277ae111b2, type: 3}
+      propertyPath: m_Layer
+      value: 14
+      objectReference: {fileID: 0}
+    - target: {fileID: 9165580820555072333, guid: 452ac13bae1c1f64c979b1277ae111b2, type: 3}
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
@@ -1139,6 +1155,10 @@ PrefabInstance:
     - target: {fileID: 1671025138926340773, guid: bfd27402cefaf1c419f7b1c8337a665d, type: 3}
       propertyPath: m_Name
       value: Agua (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1671025138926340773, guid: bfd27402cefaf1c419f7b1c8337a665d, type: 3}
+      propertyPath: m_Layer
+      value: 14
       objectReference: {fileID: 0}
     - target: {fileID: 2926378764481525457, guid: bfd27402cefaf1c419f7b1c8337a665d, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
@@ -2572,6 +2592,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1930970150}
     m_Modifications:
+    - target: {fileID: 3514875982397117241, guid: 452ac13bae1c1f64c979b1277ae111b2, type: 3}
+      propertyPath: m_Layer
+      value: 14
+      objectReference: {fileID: 0}
     - target: {fileID: 8392879694812404215, guid: 452ac13bae1c1f64c979b1277ae111b2, type: 3}
       propertyPath: m_LocalScale.x
       value: 42.33909
@@ -2623,6 +2647,10 @@ PrefabInstance:
     - target: {fileID: 9165580820555072333, guid: 452ac13bae1c1f64c979b1277ae111b2, type: 3}
       propertyPath: m_Name
       value: Sendero_lateral_camino_01 (33)
+      objectReference: {fileID: 0}
+    - target: {fileID: 9165580820555072333, guid: 452ac13bae1c1f64c979b1277ae111b2, type: 3}
+      propertyPath: m_Layer
+      value: 14
       objectReference: {fileID: 0}
     - target: {fileID: 9165580820555072333, guid: 452ac13bae1c1f64c979b1277ae111b2, type: 3}
       propertyPath: m_IsActive
@@ -2826,6 +2854,7 @@ Transform:
   - {fileID: 1266107312}
   - {fileID: 1571227556}
   - {fileID: 1440866298}
+  - {fileID: 1373430642}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &189265084
@@ -3066,6 +3095,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1930970150}
     m_Modifications:
+    - target: {fileID: 3514875982397117241, guid: 452ac13bae1c1f64c979b1277ae111b2, type: 3}
+      propertyPath: m_Layer
+      value: 14
+      objectReference: {fileID: 0}
     - target: {fileID: 8392879694812404215, guid: 452ac13bae1c1f64c979b1277ae111b2, type: 3}
       propertyPath: m_LocalScale.x
       value: 112.70061
@@ -3122,6 +3155,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Sendero_lateral_camino_01 (42)
       objectReference: {fileID: 0}
+    - target: {fileID: 9165580820555072333, guid: 452ac13bae1c1f64c979b1277ae111b2, type: 3}
+      propertyPath: m_Layer
+      value: 14
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -3140,6 +3177,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1930970150}
     m_Modifications:
+    - target: {fileID: 3514875982397117241, guid: 452ac13bae1c1f64c979b1277ae111b2, type: 3}
+      propertyPath: m_Layer
+      value: 14
+      objectReference: {fileID: 0}
     - target: {fileID: 8392879694812404215, guid: 452ac13bae1c1f64c979b1277ae111b2, type: 3}
       propertyPath: m_LocalScale.x
       value: 88.54318
@@ -3191,6 +3232,10 @@ PrefabInstance:
     - target: {fileID: 9165580820555072333, guid: 452ac13bae1c1f64c979b1277ae111b2, type: 3}
       propertyPath: m_Name
       value: Sendero_lateral_camino_01
+      objectReference: {fileID: 0}
+    - target: {fileID: 9165580820555072333, guid: 452ac13bae1c1f64c979b1277ae111b2, type: 3}
+      propertyPath: m_Layer
+      value: 14
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -3300,6 +3345,10 @@ PrefabInstance:
       propertyPath: m_LocalPosition.z
       value: 0.132
       objectReference: {fileID: 0}
+    - target: {fileID: 3514875982397117241, guid: 452ac13bae1c1f64c979b1277ae111b2, type: 3}
+      propertyPath: m_Layer
+      value: 14
+      objectReference: {fileID: 0}
     - target: {fileID: 8392879694812404215, guid: 452ac13bae1c1f64c979b1277ae111b2, type: 3}
       propertyPath: m_LocalScale.x
       value: 68.68222
@@ -3351,6 +3400,10 @@ PrefabInstance:
     - target: {fileID: 9165580820555072333, guid: 452ac13bae1c1f64c979b1277ae111b2, type: 3}
       propertyPath: m_Name
       value: Sendero_lateral_camino_01 (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 9165580820555072333, guid: 452ac13bae1c1f64c979b1277ae111b2, type: 3}
+      propertyPath: m_Layer
+      value: 14
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -4207,6 +4260,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1930970150}
     m_Modifications:
+    - target: {fileID: 3514875982397117241, guid: 452ac13bae1c1f64c979b1277ae111b2, type: 3}
+      propertyPath: m_Layer
+      value: 14
+      objectReference: {fileID: 0}
     - target: {fileID: 8392879694812404215, guid: 452ac13bae1c1f64c979b1277ae111b2, type: 3}
       propertyPath: m_LocalScale.z
       value: 80.21439
@@ -4254,6 +4311,10 @@ PrefabInstance:
     - target: {fileID: 9165580820555072333, guid: 452ac13bae1c1f64c979b1277ae111b2, type: 3}
       propertyPath: m_Name
       value: Sendero_lateral_camino_01 (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 9165580820555072333, guid: 452ac13bae1c1f64c979b1277ae111b2, type: 3}
+      propertyPath: m_Layer
+      value: 14
       objectReference: {fileID: 0}
     - target: {fileID: 9165580820555072333, guid: 452ac13bae1c1f64c979b1277ae111b2, type: 3}
       propertyPath: m_IsActive
@@ -4659,6 +4720,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1930970150}
     m_Modifications:
+    - target: {fileID: 3514875982397117241, guid: 452ac13bae1c1f64c979b1277ae111b2, type: 3}
+      propertyPath: m_Layer
+      value: 14
+      objectReference: {fileID: 0}
     - target: {fileID: 8392879694812404215, guid: 452ac13bae1c1f64c979b1277ae111b2, type: 3}
       propertyPath: m_LocalScale.x
       value: 50.25679
@@ -4710,6 +4775,10 @@ PrefabInstance:
     - target: {fileID: 9165580820555072333, guid: 452ac13bae1c1f64c979b1277ae111b2, type: 3}
       propertyPath: m_Name
       value: Sendero_lateral_camino_01 (30)
+      objectReference: {fileID: 0}
+    - target: {fileID: 9165580820555072333, guid: 452ac13bae1c1f64c979b1277ae111b2, type: 3}
+      propertyPath: m_Layer
+      value: 14
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -4963,6 +5032,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1930970150}
     m_Modifications:
+    - target: {fileID: 3514875982397117241, guid: 452ac13bae1c1f64c979b1277ae111b2, type: 3}
+      propertyPath: m_Layer
+      value: 14
+      objectReference: {fileID: 0}
     - target: {fileID: 8392879694812404215, guid: 452ac13bae1c1f64c979b1277ae111b2, type: 3}
       propertyPath: m_LocalScale.x
       value: 49.07889
@@ -5014,6 +5087,10 @@ PrefabInstance:
     - target: {fileID: 9165580820555072333, guid: 452ac13bae1c1f64c979b1277ae111b2, type: 3}
       propertyPath: m_Name
       value: Sendero_lateral_camino_01 (25)
+      objectReference: {fileID: 0}
+    - target: {fileID: 9165580820555072333, guid: 452ac13bae1c1f64c979b1277ae111b2, type: 3}
+      propertyPath: m_Layer
+      value: 14
       objectReference: {fileID: 0}
     - target: {fileID: 9165580820555072333, guid: 452ac13bae1c1f64c979b1277ae111b2, type: 3}
       propertyPath: m_IsActive
@@ -6708,8 +6785,16 @@ PrefabInstance:
       value: Camino (7)
       objectReference: {fileID: 0}
     - target: {fileID: 1961818923929140389, guid: c87ffd3d1e8c4ab49a446347f706a422, type: 3}
+      propertyPath: m_Layer
+      value: 14
+      objectReference: {fileID: 0}
+    - target: {fileID: 1961818923929140389, guid: c87ffd3d1e8c4ab49a446347f706a422, type: 3}
       propertyPath: m_IsActive
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4915479674179997424, guid: c87ffd3d1e8c4ab49a446347f706a422, type: 3}
+      propertyPath: m_Layer
+      value: 14
       objectReference: {fileID: 0}
     - target: {fileID: 9170149879430303096, guid: c87ffd3d1e8c4ab49a446347f706a422, type: 3}
       propertyPath: m_LocalScale.y
@@ -6737,6 +6822,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1930970150}
     m_Modifications:
+    - target: {fileID: 3514875982397117241, guid: 452ac13bae1c1f64c979b1277ae111b2, type: 3}
+      propertyPath: m_Layer
+      value: 14
+      objectReference: {fileID: 0}
     - target: {fileID: 8392879694812404215, guid: 452ac13bae1c1f64c979b1277ae111b2, type: 3}
       propertyPath: m_LocalScale.x
       value: 52.096188
@@ -6788,6 +6877,10 @@ PrefabInstance:
     - target: {fileID: 9165580820555072333, guid: 452ac13bae1c1f64c979b1277ae111b2, type: 3}
       propertyPath: m_Name
       value: Sendero_lateral_camino_01 (32)
+      objectReference: {fileID: 0}
+    - target: {fileID: 9165580820555072333, guid: 452ac13bae1c1f64c979b1277ae111b2, type: 3}
+      propertyPath: m_Layer
+      value: 14
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -6965,6 +7058,10 @@ PrefabInstance:
       propertyPath: m_LocalPosition.z
       value: 0.132
       objectReference: {fileID: 0}
+    - target: {fileID: 3514875982397117241, guid: 452ac13bae1c1f64c979b1277ae111b2, type: 3}
+      propertyPath: m_Layer
+      value: 14
+      objectReference: {fileID: 0}
     - target: {fileID: 8392879694812404215, guid: 452ac13bae1c1f64c979b1277ae111b2, type: 3}
       propertyPath: m_LocalScale.x
       value: 78.16516
@@ -7016,6 +7113,10 @@ PrefabInstance:
     - target: {fileID: 9165580820555072333, guid: 452ac13bae1c1f64c979b1277ae111b2, type: 3}
       propertyPath: m_Name
       value: Sendero_lateral_camino_01 (6)
+      objectReference: {fileID: 0}
+    - target: {fileID: 9165580820555072333, guid: 452ac13bae1c1f64c979b1277ae111b2, type: 3}
+      propertyPath: m_Layer
+      value: 14
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -7265,6 +7366,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1930970150}
     m_Modifications:
+    - target: {fileID: 3514875982397117241, guid: 452ac13bae1c1f64c979b1277ae111b2, type: 3}
+      propertyPath: m_Layer
+      value: 14
+      objectReference: {fileID: 0}
     - target: {fileID: 8392879694812404215, guid: 452ac13bae1c1f64c979b1277ae111b2, type: 3}
       propertyPath: m_LocalScale.x
       value: 215.1611
@@ -7322,6 +7427,10 @@ PrefabInstance:
       value: Sendero_lateral_camino_01 (47)
       objectReference: {fileID: 0}
     - target: {fileID: 9165580820555072333, guid: 452ac13bae1c1f64c979b1277ae111b2, type: 3}
+      propertyPath: m_Layer
+      value: 14
+      objectReference: {fileID: 0}
+    - target: {fileID: 9165580820555072333, guid: 452ac13bae1c1f64c979b1277ae111b2, type: 3}
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
@@ -7343,6 +7452,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1930970150}
     m_Modifications:
+    - target: {fileID: 3514875982397117241, guid: 452ac13bae1c1f64c979b1277ae111b2, type: 3}
+      propertyPath: m_Layer
+      value: 14
+      objectReference: {fileID: 0}
     - target: {fileID: 8392879694812404215, guid: 452ac13bae1c1f64c979b1277ae111b2, type: 3}
       propertyPath: m_LocalScale.x
       value: 54.533443
@@ -7394,6 +7507,10 @@ PrefabInstance:
     - target: {fileID: 9165580820555072333, guid: 452ac13bae1c1f64c979b1277ae111b2, type: 3}
       propertyPath: m_Name
       value: Sendero_lateral_camino_01 (28)
+      objectReference: {fileID: 0}
+    - target: {fileID: 9165580820555072333, guid: 452ac13bae1c1f64c979b1277ae111b2, type: 3}
+      propertyPath: m_Layer
+      value: 14
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -8139,6 +8256,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1930970150}
     m_Modifications:
+    - target: {fileID: 3514875982397117241, guid: 452ac13bae1c1f64c979b1277ae111b2, type: 3}
+      propertyPath: m_Layer
+      value: 14
+      objectReference: {fileID: 0}
     - target: {fileID: 8392879694812404215, guid: 452ac13bae1c1f64c979b1277ae111b2, type: 3}
       propertyPath: m_LocalScale.x
       value: 50.256786
@@ -8190,6 +8311,10 @@ PrefabInstance:
     - target: {fileID: 9165580820555072333, guid: 452ac13bae1c1f64c979b1277ae111b2, type: 3}
       propertyPath: m_Name
       value: Sendero_lateral_camino_01 (29)
+      objectReference: {fileID: 0}
+    - target: {fileID: 9165580820555072333, guid: 452ac13bae1c1f64c979b1277ae111b2, type: 3}
+      propertyPath: m_Layer
+      value: 14
       objectReference: {fileID: 0}
     - target: {fileID: 9165580820555072333, guid: 452ac13bae1c1f64c979b1277ae111b2, type: 3}
       propertyPath: m_IsActive
@@ -9098,8 +9223,16 @@ PrefabInstance:
       value: Camino (9)
       objectReference: {fileID: 0}
     - target: {fileID: 1961818923929140389, guid: c87ffd3d1e8c4ab49a446347f706a422, type: 3}
+      propertyPath: m_Layer
+      value: 14
+      objectReference: {fileID: 0}
+    - target: {fileID: 1961818923929140389, guid: c87ffd3d1e8c4ab49a446347f706a422, type: 3}
       propertyPath: m_IsActive
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4915479674179997424, guid: c87ffd3d1e8c4ab49a446347f706a422, type: 3}
+      propertyPath: m_Layer
+      value: 14
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -9287,6 +9420,10 @@ PrefabInstance:
       propertyPath: m_LocalPosition.z
       value: 0.132
       objectReference: {fileID: 0}
+    - target: {fileID: 3514875982397117241, guid: 452ac13bae1c1f64c979b1277ae111b2, type: 3}
+      propertyPath: m_Layer
+      value: 14
+      objectReference: {fileID: 0}
     - target: {fileID: 8392879694812404215, guid: 452ac13bae1c1f64c979b1277ae111b2, type: 3}
       propertyPath: m_LocalScale.x
       value: 78.16516
@@ -9338,6 +9475,10 @@ PrefabInstance:
     - target: {fileID: 9165580820555072333, guid: 452ac13bae1c1f64c979b1277ae111b2, type: 3}
       propertyPath: m_Name
       value: Sendero_lateral_camino_01 (4)
+      objectReference: {fileID: 0}
+    - target: {fileID: 9165580820555072333, guid: 452ac13bae1c1f64c979b1277ae111b2, type: 3}
+      propertyPath: m_Layer
+      value: 14
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -9677,7 +9818,7 @@ Transform:
   m_GameObject: {fileID: 582890717}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -2, y: 3.21, z: 0.11757994}
+  m_LocalPosition: {x: -2.17, y: 3.21, z: 0.11757994}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -10068,8 +10209,16 @@ PrefabInstance:
       value: Camino (17)
       objectReference: {fileID: 0}
     - target: {fileID: 1961818923929140389, guid: c87ffd3d1e8c4ab49a446347f706a422, type: 3}
+      propertyPath: m_Layer
+      value: 14
+      objectReference: {fileID: 0}
+    - target: {fileID: 1961818923929140389, guid: c87ffd3d1e8c4ab49a446347f706a422, type: 3}
       propertyPath: m_IsActive
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4915479674179997424, guid: c87ffd3d1e8c4ab49a446347f706a422, type: 3}
+      propertyPath: m_Layer
+      value: 14
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -10241,6 +10390,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1930970150}
     m_Modifications:
+    - target: {fileID: 3514875982397117241, guid: 452ac13bae1c1f64c979b1277ae111b2, type: 3}
+      propertyPath: m_Layer
+      value: 14
+      objectReference: {fileID: 0}
     - target: {fileID: 8392879694812404215, guid: 452ac13bae1c1f64c979b1277ae111b2, type: 3}
       propertyPath: m_LocalScale.x
       value: 41.28079
@@ -10292,6 +10445,10 @@ PrefabInstance:
     - target: {fileID: 9165580820555072333, guid: 452ac13bae1c1f64c979b1277ae111b2, type: 3}
       propertyPath: m_Name
       value: Sendero_lateral_camino_01 (19)
+      objectReference: {fileID: 0}
+    - target: {fileID: 9165580820555072333, guid: 452ac13bae1c1f64c979b1277ae111b2, type: 3}
+      propertyPath: m_Layer
+      value: 14
       objectReference: {fileID: 0}
     - target: {fileID: 9165580820555072333, guid: 452ac13bae1c1f64c979b1277ae111b2, type: 3}
       propertyPath: m_IsActive
@@ -12062,6 +12219,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1930970150}
     m_Modifications:
+    - target: {fileID: 3514875982397117241, guid: 452ac13bae1c1f64c979b1277ae111b2, type: 3}
+      propertyPath: m_Layer
+      value: 14
+      objectReference: {fileID: 0}
     - target: {fileID: 8392879694812404215, guid: 452ac13bae1c1f64c979b1277ae111b2, type: 3}
       propertyPath: m_LocalScale.x
       value: 70.701675
@@ -12113,6 +12274,10 @@ PrefabInstance:
     - target: {fileID: 9165580820555072333, guid: 452ac13bae1c1f64c979b1277ae111b2, type: 3}
       propertyPath: m_Name
       value: Sendero_lateral_camino_01 (36)
+      objectReference: {fileID: 0}
+    - target: {fileID: 9165580820555072333, guid: 452ac13bae1c1f64c979b1277ae111b2, type: 3}
+      propertyPath: m_Layer
+      value: 14
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -13139,6 +13304,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1930970150}
     m_Modifications:
+    - target: {fileID: 3514875982397117241, guid: 452ac13bae1c1f64c979b1277ae111b2, type: 3}
+      propertyPath: m_Layer
+      value: 14
+      objectReference: {fileID: 0}
     - target: {fileID: 8392879694812404215, guid: 452ac13bae1c1f64c979b1277ae111b2, type: 3}
       propertyPath: m_LocalScale.x
       value: 66.81365
@@ -13194,6 +13363,10 @@ PrefabInstance:
     - target: {fileID: 9165580820555072333, guid: 452ac13bae1c1f64c979b1277ae111b2, type: 3}
       propertyPath: m_Name
       value: Sendero_lateral_camino_01 (45)
+      objectReference: {fileID: 0}
+    - target: {fileID: 9165580820555072333, guid: 452ac13bae1c1f64c979b1277ae111b2, type: 3}
+      propertyPath: m_Layer
+      value: 14
       objectReference: {fileID: 0}
     - target: {fileID: 9165580820555072333, guid: 452ac13bae1c1f64c979b1277ae111b2, type: 3}
       propertyPath: m_IsActive
@@ -13948,8 +14121,16 @@ PrefabInstance:
       value: Camino (2)
       objectReference: {fileID: 0}
     - target: {fileID: 1961818923929140389, guid: c87ffd3d1e8c4ab49a446347f706a422, type: 3}
+      propertyPath: m_Layer
+      value: 14
+      objectReference: {fileID: 0}
+    - target: {fileID: 1961818923929140389, guid: c87ffd3d1e8c4ab49a446347f706a422, type: 3}
       propertyPath: m_IsActive
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4915479674179997424, guid: c87ffd3d1e8c4ab49a446347f706a422, type: 3}
+      propertyPath: m_Layer
+      value: 14
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -14215,6 +14396,10 @@ PrefabInstance:
       propertyPath: m_LocalPosition.z
       value: 0.132
       objectReference: {fileID: 0}
+    - target: {fileID: 3514875982397117241, guid: 452ac13bae1c1f64c979b1277ae111b2, type: 3}
+      propertyPath: m_Layer
+      value: 14
+      objectReference: {fileID: 0}
     - target: {fileID: 8392879694812404215, guid: 452ac13bae1c1f64c979b1277ae111b2, type: 3}
       propertyPath: m_LocalScale.x
       value: 68.68222
@@ -14266,6 +14451,10 @@ PrefabInstance:
     - target: {fileID: 9165580820555072333, guid: 452ac13bae1c1f64c979b1277ae111b2, type: 3}
       propertyPath: m_Name
       value: Sendero_lateral_camino_01 (5)
+      objectReference: {fileID: 0}
+    - target: {fileID: 9165580820555072333, guid: 452ac13bae1c1f64c979b1277ae111b2, type: 3}
+      propertyPath: m_Layer
+      value: 14
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -15212,6 +15401,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1930970150}
     m_Modifications:
+    - target: {fileID: 3514875982397117241, guid: 452ac13bae1c1f64c979b1277ae111b2, type: 3}
+      propertyPath: m_Layer
+      value: 14
+      objectReference: {fileID: 0}
     - target: {fileID: 8392879694812404215, guid: 452ac13bae1c1f64c979b1277ae111b2, type: 3}
       propertyPath: m_LocalScale.x
       value: 215.16113
@@ -15268,6 +15461,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Sendero_lateral_camino_01 (48)
       objectReference: {fileID: 0}
+    - target: {fileID: 9165580820555072333, guid: 452ac13bae1c1f64c979b1277ae111b2, type: 3}
+      propertyPath: m_Layer
+      value: 14
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -15286,6 +15483,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1930970150}
     m_Modifications:
+    - target: {fileID: 717508310718078919, guid: 1ada14fd4dda2aa4d98ce8817ac64142, type: 3}
+      propertyPath: m_Layer
+      value: 14
+      objectReference: {fileID: 0}
     - target: {fileID: 1456470345528730960, guid: 1ada14fd4dda2aa4d98ce8817ac64142, type: 3}
       propertyPath: m_LocalScale.y
       value: 0.86794823
@@ -15305,6 +15506,10 @@ PrefabInstance:
     - target: {fileID: 7095498080600538986, guid: 1ada14fd4dda2aa4d98ce8817ac64142, type: 3}
       propertyPath: m_Name
       value: Sendero_lateral_camino_02 (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 7095498080600538986, guid: 1ada14fd4dda2aa4d98ce8817ac64142, type: 3}
+      propertyPath: m_Layer
+      value: 14
       objectReference: {fileID: 0}
     - target: {fileID: 7580566724535739856, guid: 1ada14fd4dda2aa4d98ce8817ac64142, type: 3}
       propertyPath: m_LocalScale.x
@@ -15651,8 +15856,16 @@ PrefabInstance:
       value: Camino (4)
       objectReference: {fileID: 0}
     - target: {fileID: 1961818923929140389, guid: c87ffd3d1e8c4ab49a446347f706a422, type: 3}
+      propertyPath: m_Layer
+      value: 14
+      objectReference: {fileID: 0}
+    - target: {fileID: 1961818923929140389, guid: c87ffd3d1e8c4ab49a446347f706a422, type: 3}
       propertyPath: m_IsActive
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4915479674179997424, guid: c87ffd3d1e8c4ab49a446347f706a422, type: 3}
+      propertyPath: m_Layer
+      value: 14
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -16702,6 +16915,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1930970150}
     m_Modifications:
+    - target: {fileID: 3514875982397117241, guid: 452ac13bae1c1f64c979b1277ae111b2, type: 3}
+      propertyPath: m_Layer
+      value: 14
+      objectReference: {fileID: 0}
     - target: {fileID: 8392879694812404215, guid: 452ac13bae1c1f64c979b1277ae111b2, type: 3}
       propertyPath: m_LocalScale.x
       value: 112.70059
@@ -16757,6 +16974,10 @@ PrefabInstance:
     - target: {fileID: 9165580820555072333, guid: 452ac13bae1c1f64c979b1277ae111b2, type: 3}
       propertyPath: m_Name
       value: Sendero_lateral_camino_01 (41)
+      objectReference: {fileID: 0}
+    - target: {fileID: 9165580820555072333, guid: 452ac13bae1c1f64c979b1277ae111b2, type: 3}
+      propertyPath: m_Layer
+      value: 14
       objectReference: {fileID: 0}
     - target: {fileID: 9165580820555072333, guid: 452ac13bae1c1f64c979b1277ae111b2, type: 3}
       propertyPath: m_IsActive
@@ -17085,6 +17306,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1930970150}
     m_Modifications:
+    - target: {fileID: 3514875982397117241, guid: 452ac13bae1c1f64c979b1277ae111b2, type: 3}
+      propertyPath: m_Layer
+      value: 14
+      objectReference: {fileID: 0}
     - target: {fileID: 8392879694812404215, guid: 452ac13bae1c1f64c979b1277ae111b2, type: 3}
       propertyPath: m_LocalScale.x
       value: 199.79541
@@ -17140,6 +17365,10 @@ PrefabInstance:
     - target: {fileID: 9165580820555072333, guid: 452ac13bae1c1f64c979b1277ae111b2, type: 3}
       propertyPath: m_Name
       value: Sendero_lateral_camino_01 (39)
+      objectReference: {fileID: 0}
+    - target: {fileID: 9165580820555072333, guid: 452ac13bae1c1f64c979b1277ae111b2, type: 3}
+      propertyPath: m_Layer
+      value: 14
       objectReference: {fileID: 0}
     - target: {fileID: 9165580820555072333, guid: 452ac13bae1c1f64c979b1277ae111b2, type: 3}
       propertyPath: m_IsActive
@@ -18436,6 +18665,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1930970150}
     m_Modifications:
+    - target: {fileID: 3514875982397117241, guid: 452ac13bae1c1f64c979b1277ae111b2, type: 3}
+      propertyPath: m_Layer
+      value: 14
+      objectReference: {fileID: 0}
     - target: {fileID: 8392879694812404215, guid: 452ac13bae1c1f64c979b1277ae111b2, type: 3}
       propertyPath: m_LocalScale.x
       value: 42.339092
@@ -18487,6 +18720,10 @@ PrefabInstance:
     - target: {fileID: 9165580820555072333, guid: 452ac13bae1c1f64c979b1277ae111b2, type: 3}
       propertyPath: m_Name
       value: Sendero_lateral_camino_01 (34)
+      objectReference: {fileID: 0}
+    - target: {fileID: 9165580820555072333, guid: 452ac13bae1c1f64c979b1277ae111b2, type: 3}
+      propertyPath: m_Layer
+      value: 14
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -18641,8 +18878,16 @@ PrefabInstance:
       value: Camino (14)
       objectReference: {fileID: 0}
     - target: {fileID: 1961818923929140389, guid: c87ffd3d1e8c4ab49a446347f706a422, type: 3}
+      propertyPath: m_Layer
+      value: 14
+      objectReference: {fileID: 0}
+    - target: {fileID: 1961818923929140389, guid: c87ffd3d1e8c4ab49a446347f706a422, type: 3}
       propertyPath: m_IsActive
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4915479674179997424, guid: c87ffd3d1e8c4ab49a446347f706a422, type: 3}
+      propertyPath: m_Layer
+      value: 14
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -19585,8 +19830,16 @@ PrefabInstance:
       value: Camino (12)
       objectReference: {fileID: 0}
     - target: {fileID: 1961818923929140389, guid: c87ffd3d1e8c4ab49a446347f706a422, type: 3}
+      propertyPath: m_Layer
+      value: 14
+      objectReference: {fileID: 0}
+    - target: {fileID: 1961818923929140389, guid: c87ffd3d1e8c4ab49a446347f706a422, type: 3}
       propertyPath: m_IsActive
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4915479674179997424, guid: c87ffd3d1e8c4ab49a446347f706a422, type: 3}
+      propertyPath: m_Layer
+      value: 14
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -20127,6 +20380,10 @@ PrefabInstance:
     - target: {fileID: 1961818923929140389, guid: c87ffd3d1e8c4ab49a446347f706a422, type: 3}
       propertyPath: m_Name
       value: Camino (5)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1961818923929140389, guid: c87ffd3d1e8c4ab49a446347f706a422, type: 3}
+      propertyPath: m_Layer
+      value: 14
       objectReference: {fileID: 0}
     - target: {fileID: 1961818923929140389, guid: c87ffd3d1e8c4ab49a446347f706a422, type: 3}
       propertyPath: m_IsActive
@@ -20893,6 +21150,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1930970150}
     m_Modifications:
+    - target: {fileID: 3514875982397117241, guid: 452ac13bae1c1f64c979b1277ae111b2, type: 3}
+      propertyPath: m_Layer
+      value: 14
+      objectReference: {fileID: 0}
     - target: {fileID: 8392879694812404215, guid: 452ac13bae1c1f64c979b1277ae111b2, type: 3}
       propertyPath: m_LocalScale.x
       value: 203.01884
@@ -20948,6 +21209,10 @@ PrefabInstance:
     - target: {fileID: 9165580820555072333, guid: 452ac13bae1c1f64c979b1277ae111b2, type: 3}
       propertyPath: m_Name
       value: Sendero_lateral_camino_01 (43)
+      objectReference: {fileID: 0}
+    - target: {fileID: 9165580820555072333, guid: 452ac13bae1c1f64c979b1277ae111b2, type: 3}
+      propertyPath: m_Layer
+      value: 14
       objectReference: {fileID: 0}
     - target: {fileID: 9165580820555072333, guid: 452ac13bae1c1f64c979b1277ae111b2, type: 3}
       propertyPath: m_IsActive
@@ -21215,8 +21480,16 @@ PrefabInstance:
       value: Camino (16)
       objectReference: {fileID: 0}
     - target: {fileID: 1961818923929140389, guid: c87ffd3d1e8c4ab49a446347f706a422, type: 3}
+      propertyPath: m_Layer
+      value: 14
+      objectReference: {fileID: 0}
+    - target: {fileID: 1961818923929140389, guid: c87ffd3d1e8c4ab49a446347f706a422, type: 3}
       propertyPath: m_IsActive
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4915479674179997424, guid: c87ffd3d1e8c4ab49a446347f706a422, type: 3}
+      propertyPath: m_Layer
+      value: 14
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -21475,6 +21748,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1930970150}
     m_Modifications:
+    - target: {fileID: 3514875982397117241, guid: 452ac13bae1c1f64c979b1277ae111b2, type: 3}
+      propertyPath: m_Layer
+      value: 14
+      objectReference: {fileID: 0}
     - target: {fileID: 8392879694812404215, guid: 452ac13bae1c1f64c979b1277ae111b2, type: 3}
       propertyPath: m_LocalScale.x
       value: 39.44653
@@ -21526,6 +21803,10 @@ PrefabInstance:
     - target: {fileID: 9165580820555072333, guid: 452ac13bae1c1f64c979b1277ae111b2, type: 3}
       propertyPath: m_Name
       value: Sendero_lateral_camino_01 (18)
+      objectReference: {fileID: 0}
+    - target: {fileID: 9165580820555072333, guid: 452ac13bae1c1f64c979b1277ae111b2, type: 3}
+      propertyPath: m_Layer
+      value: 14
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -21581,6 +21862,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1930970150}
     m_Modifications:
+    - target: {fileID: 3514875982397117241, guid: 452ac13bae1c1f64c979b1277ae111b2, type: 3}
+      propertyPath: m_Layer
+      value: 14
+      objectReference: {fileID: 0}
     - target: {fileID: 8392879694812404215, guid: 452ac13bae1c1f64c979b1277ae111b2, type: 3}
       propertyPath: m_LocalScale.x
       value: 39.44653
@@ -21632,6 +21917,10 @@ PrefabInstance:
     - target: {fileID: 9165580820555072333, guid: 452ac13bae1c1f64c979b1277ae111b2, type: 3}
       propertyPath: m_Name
       value: Sendero_lateral_camino_01 (20)
+      objectReference: {fileID: 0}
+    - target: {fileID: 9165580820555072333, guid: 452ac13bae1c1f64c979b1277ae111b2, type: 3}
+      propertyPath: m_Layer
+      value: 14
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -21729,6 +22018,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1930970150}
     m_Modifications:
+    - target: {fileID: 3514875982397117241, guid: 452ac13bae1c1f64c979b1277ae111b2, type: 3}
+      propertyPath: m_Layer
+      value: 14
+      objectReference: {fileID: 0}
     - target: {fileID: 8392879694812404215, guid: 452ac13bae1c1f64c979b1277ae111b2, type: 3}
       propertyPath: m_LocalScale.x
       value: 70.724915
@@ -21784,6 +22077,10 @@ PrefabInstance:
     - target: {fileID: 9165580820555072333, guid: 452ac13bae1c1f64c979b1277ae111b2, type: 3}
       propertyPath: m_Name
       value: Sendero_lateral_camino_01 (37)
+      objectReference: {fileID: 0}
+    - target: {fileID: 9165580820555072333, guid: 452ac13bae1c1f64c979b1277ae111b2, type: 3}
+      propertyPath: m_Layer
+      value: 14
       objectReference: {fileID: 0}
     - target: {fileID: 9165580820555072333, guid: 452ac13bae1c1f64c979b1277ae111b2, type: 3}
       propertyPath: m_IsActive
@@ -22238,8 +22535,16 @@ PrefabInstance:
       value: Camino (8)
       objectReference: {fileID: 0}
     - target: {fileID: 1961818923929140389, guid: c87ffd3d1e8c4ab49a446347f706a422, type: 3}
+      propertyPath: m_Layer
+      value: 14
+      objectReference: {fileID: 0}
+    - target: {fileID: 1961818923929140389, guid: c87ffd3d1e8c4ab49a446347f706a422, type: 3}
       propertyPath: m_IsActive
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4915479674179997424, guid: c87ffd3d1e8c4ab49a446347f706a422, type: 3}
+      propertyPath: m_Layer
+      value: 14
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -22439,6 +22744,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1930970150}
     m_Modifications:
+    - target: {fileID: 3514875982397117241, guid: 452ac13bae1c1f64c979b1277ae111b2, type: 3}
+      propertyPath: m_Layer
+      value: 14
+      objectReference: {fileID: 0}
     - target: {fileID: 8392879694812404215, guid: 452ac13bae1c1f64c979b1277ae111b2, type: 3}
       propertyPath: m_LocalScale.x
       value: 203.01888
@@ -22494,6 +22803,10 @@ PrefabInstance:
     - target: {fileID: 9165580820555072333, guid: 452ac13bae1c1f64c979b1277ae111b2, type: 3}
       propertyPath: m_Name
       value: Sendero_lateral_camino_01 (44)
+      objectReference: {fileID: 0}
+    - target: {fileID: 9165580820555072333, guid: 452ac13bae1c1f64c979b1277ae111b2, type: 3}
+      propertyPath: m_Layer
+      value: 14
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -23192,6 +23505,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1930970150}
     m_Modifications:
+    - target: {fileID: 3514875982397117241, guid: 452ac13bae1c1f64c979b1277ae111b2, type: 3}
+      propertyPath: m_Layer
+      value: 14
+      objectReference: {fileID: 0}
     - target: {fileID: 8392879694812404215, guid: 452ac13bae1c1f64c979b1277ae111b2, type: 3}
       propertyPath: m_LocalScale.x
       value: 54.53344
@@ -23243,6 +23560,10 @@ PrefabInstance:
     - target: {fileID: 9165580820555072333, guid: 452ac13bae1c1f64c979b1277ae111b2, type: 3}
       propertyPath: m_Name
       value: Sendero_lateral_camino_01 (27)
+      objectReference: {fileID: 0}
+    - target: {fileID: 9165580820555072333, guid: 452ac13bae1c1f64c979b1277ae111b2, type: 3}
+      propertyPath: m_Layer
+      value: 14
       objectReference: {fileID: 0}
     - target: {fileID: 9165580820555072333, guid: 452ac13bae1c1f64c979b1277ae111b2, type: 3}
       propertyPath: m_IsActive
@@ -23488,6 +23809,33 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 2290697329167942507, guid: 97d891173c3cc024d8d89ead9a6ee4a2, type: 3}
   m_PrefabInstance: {fileID: 1319203268}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1320106940 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1961818923929140389, guid: c87ffd3d1e8c4ab49a446347f706a422, type: 3}
+  m_PrefabInstance: {fileID: 8575631166089449871}
+  m_PrefabAsset: {fileID: 0}
+--- !u!64 &1320106941
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1320106940}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 5
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 0}
 --- !u!1001 &1323381153
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -23892,8 +24240,16 @@ PrefabInstance:
       value: Camino (15)
       objectReference: {fileID: 0}
     - target: {fileID: 1961818923929140389, guid: c87ffd3d1e8c4ab49a446347f706a422, type: 3}
+      propertyPath: m_Layer
+      value: 14
+      objectReference: {fileID: 0}
+    - target: {fileID: 1961818923929140389, guid: c87ffd3d1e8c4ab49a446347f706a422, type: 3}
       propertyPath: m_IsActive
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4915479674179997424, guid: c87ffd3d1e8c4ab49a446347f706a422, type: 3}
+      propertyPath: m_Layer
+      value: 14
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -24225,6 +24581,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1930970150}
     m_Modifications:
+    - target: {fileID: 3514875982397117241, guid: 452ac13bae1c1f64c979b1277ae111b2, type: 3}
+      propertyPath: m_Layer
+      value: 14
+      objectReference: {fileID: 0}
     - target: {fileID: 8392879694812404215, guid: 452ac13bae1c1f64c979b1277ae111b2, type: 3}
       propertyPath: m_LocalScale.x
       value: 239.72543
@@ -24280,6 +24640,10 @@ PrefabInstance:
     - target: {fileID: 9165580820555072333, guid: 452ac13bae1c1f64c979b1277ae111b2, type: 3}
       propertyPath: m_Name
       value: Sendero_lateral_camino_01 (52)
+      objectReference: {fileID: 0}
+    - target: {fileID: 9165580820555072333, guid: 452ac13bae1c1f64c979b1277ae111b2, type: 3}
+      propertyPath: m_Layer
+      value: 14
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -24525,6 +24889,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1930970150}
     m_Modifications:
+    - target: {fileID: 3514875982397117241, guid: 452ac13bae1c1f64c979b1277ae111b2, type: 3}
+      propertyPath: m_Layer
+      value: 14
+      objectReference: {fileID: 0}
     - target: {fileID: 8392879694812404215, guid: 452ac13bae1c1f64c979b1277ae111b2, type: 3}
       propertyPath: m_LocalScale.x
       value: 49.078896
@@ -24577,6 +24945,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Sendero_lateral_camino_01 (26)
       objectReference: {fileID: 0}
+    - target: {fileID: 9165580820555072333, guid: 452ac13bae1c1f64c979b1277ae111b2, type: 3}
+      propertyPath: m_Layer
+      value: 14
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -24587,6 +24959,51 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 8392879694812404215, guid: 452ac13bae1c1f64c979b1277ae111b2, type: 3}
   m_PrefabInstance: {fileID: 1365487476}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1373430641
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1373430642}
+  - component: {fileID: 1373430643}
+  m_Layer: 0
+  m_Name: InputManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1373430642
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1373430641}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 171239489}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1373430643
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1373430641}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2c37cbbede1e76b458bd66d28f2620de, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::TravesiaColombia.Player.InputManager
+  _inputActions: {fileID: -944628639613478452, guid: 8fc34358ac9a9f441a82aab790f210ff, type: 3}
 --- !u!1001 &1374614822
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -25171,6 +25588,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1930970150}
     m_Modifications:
+    - target: {fileID: 3514875982397117241, guid: 452ac13bae1c1f64c979b1277ae111b2, type: 3}
+      propertyPath: m_Layer
+      value: 14
+      objectReference: {fileID: 0}
     - target: {fileID: 8392879694812404215, guid: 452ac13bae1c1f64c979b1277ae111b2, type: 3}
       propertyPath: m_LocalScale.x
       value: 45.063717
@@ -25222,6 +25643,10 @@ PrefabInstance:
     - target: {fileID: 9165580820555072333, guid: 452ac13bae1c1f64c979b1277ae111b2, type: 3}
       propertyPath: m_Name
       value: Sendero_lateral_camino_01 (23)
+      objectReference: {fileID: 0}
+    - target: {fileID: 9165580820555072333, guid: 452ac13bae1c1f64c979b1277ae111b2, type: 3}
+      propertyPath: m_Layer
+      value: 14
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -25743,8 +26168,16 @@ PrefabInstance:
       value: Camino (13)
       objectReference: {fileID: 0}
     - target: {fileID: 1961818923929140389, guid: c87ffd3d1e8c4ab49a446347f706a422, type: 3}
+      propertyPath: m_Layer
+      value: 14
+      objectReference: {fileID: 0}
+    - target: {fileID: 1961818923929140389, guid: c87ffd3d1e8c4ab49a446347f706a422, type: 3}
       propertyPath: m_IsActive
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4915479674179997424, guid: c87ffd3d1e8c4ab49a446347f706a422, type: 3}
+      propertyPath: m_Layer
+      value: 14
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -26200,6 +26633,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1930970150}
     m_Modifications:
+    - target: {fileID: 3514875982397117241, guid: 452ac13bae1c1f64c979b1277ae111b2, type: 3}
+      propertyPath: m_Layer
+      value: 14
+      objectReference: {fileID: 0}
     - target: {fileID: 8392879694812404215, guid: 452ac13bae1c1f64c979b1277ae111b2, type: 3}
       propertyPath: m_LocalScale.x
       value: 66.81367
@@ -26255,6 +26692,10 @@ PrefabInstance:
     - target: {fileID: 9165580820555072333, guid: 452ac13bae1c1f64c979b1277ae111b2, type: 3}
       propertyPath: m_Name
       value: Sendero_lateral_camino_01 (46)
+      objectReference: {fileID: 0}
+    - target: {fileID: 9165580820555072333, guid: 452ac13bae1c1f64c979b1277ae111b2, type: 3}
+      propertyPath: m_Layer
+      value: 14
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -27402,6 +27843,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1930970150}
     m_Modifications:
+    - target: {fileID: 3514875982397117241, guid: 452ac13bae1c1f64c979b1277ae111b2, type: 3}
+      propertyPath: m_Layer
+      value: 14
+      objectReference: {fileID: 0}
     - target: {fileID: 8392879694812404215, guid: 452ac13bae1c1f64c979b1277ae111b2, type: 3}
       propertyPath: m_LocalScale.x
       value: 45.063713
@@ -27455,6 +27900,10 @@ PrefabInstance:
       value: Sendero_lateral_camino_01 (21)
       objectReference: {fileID: 0}
     - target: {fileID: 9165580820555072333, guid: 452ac13bae1c1f64c979b1277ae111b2, type: 3}
+      propertyPath: m_Layer
+      value: 14
+      objectReference: {fileID: 0}
+    - target: {fileID: 9165580820555072333, guid: 452ac13bae1c1f64c979b1277ae111b2, type: 3}
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
@@ -27468,6 +27917,232 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 8392879694812404215, guid: 452ac13bae1c1f64c979b1277ae111b2, type: 3}
   m_PrefabInstance: {fileID: 1555557105}
   m_PrefabAsset: {fileID: 0}
+--- !u!1001 &1556191808
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 1608798640}
+    m_Modifications:
+    - target: {fileID: -9070493210130169274, guid: 78b281bcf2c617f4995fce1b57263e56, type: 3}
+      propertyPath: m_Layer
+      value: 11
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 78b281bcf2c617f4995fce1b57263e56, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 43.587715
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 78b281bcf2c617f4995fce1b57263e56, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 43.587715
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 78b281bcf2c617f4995fce1b57263e56, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 43.587715
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 78b281bcf2c617f4995fce1b57263e56, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -14.126
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 78b281bcf2c617f4995fce1b57263e56, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.89
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 78b281bcf2c617f4995fce1b57263e56, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -8.5712
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 78b281bcf2c617f4995fce1b57263e56, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 78b281bcf2c617f4995fce1b57263e56, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 78b281bcf2c617f4995fce1b57263e56, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 78b281bcf2c617f4995fce1b57263e56, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 78b281bcf2c617f4995fce1b57263e56, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 78b281bcf2c617f4995fce1b57263e56, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 78b281bcf2c617f4995fce1b57263e56, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8006009767450596044, guid: 78b281bcf2c617f4995fce1b57263e56, type: 3}
+      propertyPath: m_Layer
+      value: 11
+      objectReference: {fileID: 0}
+    - target: {fileID: -7657966619581158213, guid: 78b281bcf2c617f4995fce1b57263e56, type: 3}
+      propertyPath: m_Layer
+      value: 11
+      objectReference: {fileID: 0}
+    - target: {fileID: -7360747449169001873, guid: 78b281bcf2c617f4995fce1b57263e56, type: 3}
+      propertyPath: m_Layer
+      value: 11
+      objectReference: {fileID: 0}
+    - target: {fileID: -6370085079684087283, guid: 78b281bcf2c617f4995fce1b57263e56, type: 3}
+      propertyPath: m_Layer
+      value: 11
+      objectReference: {fileID: 0}
+    - target: {fileID: -6170625038081293824, guid: 78b281bcf2c617f4995fce1b57263e56, type: 3}
+      propertyPath: m_Layer
+      value: 11
+      objectReference: {fileID: 0}
+    - target: {fileID: -6056541330796499132, guid: 78b281bcf2c617f4995fce1b57263e56, type: 3}
+      propertyPath: m_Layer
+      value: 11
+      objectReference: {fileID: 0}
+    - target: {fileID: -5561550452697079657, guid: 78b281bcf2c617f4995fce1b57263e56, type: 3}
+      propertyPath: m_Layer
+      value: 11
+      objectReference: {fileID: 0}
+    - target: {fileID: -5195048882033904264, guid: 78b281bcf2c617f4995fce1b57263e56, type: 3}
+      propertyPath: m_Layer
+      value: 11
+      objectReference: {fileID: 0}
+    - target: {fileID: -4728426434207774260, guid: 78b281bcf2c617f4995fce1b57263e56, type: 3}
+      propertyPath: m_Layer
+      value: 11
+      objectReference: {fileID: 0}
+    - target: {fileID: -4332706925441422008, guid: 78b281bcf2c617f4995fce1b57263e56, type: 3}
+      propertyPath: m_Layer
+      value: 11
+      objectReference: {fileID: 0}
+    - target: {fileID: -3542885339558904099, guid: 78b281bcf2c617f4995fce1b57263e56, type: 3}
+      propertyPath: m_Layer
+      value: 11
+      objectReference: {fileID: 0}
+    - target: {fileID: -3086436065929644917, guid: 78b281bcf2c617f4995fce1b57263e56, type: 3}
+      propertyPath: m_Layer
+      value: 11
+      objectReference: {fileID: 0}
+    - target: {fileID: -2084811680363313996, guid: 78b281bcf2c617f4995fce1b57263e56, type: 3}
+      propertyPath: m_Layer
+      value: 11
+      objectReference: {fileID: 0}
+    - target: {fileID: -1781356600409242780, guid: 78b281bcf2c617f4995fce1b57263e56, type: 3}
+      propertyPath: m_Layer
+      value: 11
+      objectReference: {fileID: 0}
+    - target: {fileID: -1703473491307067327, guid: 78b281bcf2c617f4995fce1b57263e56, type: 3}
+      propertyPath: m_Layer
+      value: 11
+      objectReference: {fileID: 0}
+    - target: {fileID: -1200856079203341021, guid: 78b281bcf2c617f4995fce1b57263e56, type: 3}
+      propertyPath: m_Layer
+      value: 11
+      objectReference: {fileID: 0}
+    - target: {fileID: -751476226918971245, guid: 78b281bcf2c617f4995fce1b57263e56, type: 3}
+      propertyPath: m_Layer
+      value: 11
+      objectReference: {fileID: 0}
+    - target: {fileID: -552831747908440785, guid: 78b281bcf2c617f4995fce1b57263e56, type: 3}
+      propertyPath: m_Layer
+      value: 11
+      objectReference: {fileID: 0}
+    - target: {fileID: -290750445479886849, guid: 78b281bcf2c617f4995fce1b57263e56, type: 3}
+      propertyPath: m_Layer
+      value: 11
+      objectReference: {fileID: 0}
+    - target: {fileID: -203856693384778745, guid: 78b281bcf2c617f4995fce1b57263e56, type: 3}
+      propertyPath: m_Layer
+      value: 11
+      objectReference: {fileID: 0}
+    - target: {fileID: 9171100556185337, guid: 78b281bcf2c617f4995fce1b57263e56, type: 3}
+      propertyPath: m_Layer
+      value: 11
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 78b281bcf2c617f4995fce1b57263e56, type: 3}
+      propertyPath: m_Name
+      value: T-Pose
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 78b281bcf2c617f4995fce1b57263e56, type: 3}
+      propertyPath: m_Layer
+      value: 11
+      objectReference: {fileID: 0}
+    - target: {fileID: 1082271958561512970, guid: 78b281bcf2c617f4995fce1b57263e56, type: 3}
+      propertyPath: m_Layer
+      value: 11
+      objectReference: {fileID: 0}
+    - target: {fileID: 1339101018200438765, guid: 78b281bcf2c617f4995fce1b57263e56, type: 3}
+      propertyPath: m_Layer
+      value: 11
+      objectReference: {fileID: 0}
+    - target: {fileID: 2715566404302941441, guid: 78b281bcf2c617f4995fce1b57263e56, type: 3}
+      propertyPath: m_Layer
+      value: 11
+      objectReference: {fileID: 0}
+    - target: {fileID: 2898355158428612036, guid: 78b281bcf2c617f4995fce1b57263e56, type: 3}
+      propertyPath: m_Layer
+      value: 11
+      objectReference: {fileID: 0}
+    - target: {fileID: 3135921509060577837, guid: 78b281bcf2c617f4995fce1b57263e56, type: 3}
+      propertyPath: m_Layer
+      value: 11
+      objectReference: {fileID: 0}
+    - target: {fileID: 3614653200513675785, guid: 78b281bcf2c617f4995fce1b57263e56, type: 3}
+      propertyPath: m_Layer
+      value: 11
+      objectReference: {fileID: 0}
+    - target: {fileID: 3948933247560734027, guid: 78b281bcf2c617f4995fce1b57263e56, type: 3}
+      propertyPath: m_Layer
+      value: 11
+      objectReference: {fileID: 0}
+    - target: {fileID: 3974016661214395164, guid: 78b281bcf2c617f4995fce1b57263e56, type: 3}
+      propertyPath: m_Layer
+      value: 11
+      objectReference: {fileID: 0}
+    - target: {fileID: 4441848305933595309, guid: 78b281bcf2c617f4995fce1b57263e56, type: 3}
+      propertyPath: m_Layer
+      value: 11
+      objectReference: {fileID: 0}
+    - target: {fileID: 4549111882529890269, guid: 78b281bcf2c617f4995fce1b57263e56, type: 3}
+      propertyPath: m_Layer
+      value: 11
+      objectReference: {fileID: 0}
+    - target: {fileID: 5866666021909216657, guid: 78b281bcf2c617f4995fce1b57263e56, type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: 0bf98417407dc4f42bf78f114788e459, type: 2}
+    - target: {fileID: 8278876779762004546, guid: 78b281bcf2c617f4995fce1b57263e56, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 90fd5541b9df99d4f832e7245f77b86a, type: 2}
+    - target: {fileID: 8817898888258712963, guid: 78b281bcf2c617f4995fce1b57263e56, type: 3}
+      propertyPath: m_Layer
+      value: 11
+      objectReference: {fileID: 0}
+    - target: {fileID: 8991993599984974964, guid: 78b281bcf2c617f4995fce1b57263e56, type: 3}
+      propertyPath: m_Layer
+      value: 11
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 78b281bcf2c617f4995fce1b57263e56, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 2128975296}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 78b281bcf2c617f4995fce1b57263e56, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 2128975295}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 78b281bcf2c617f4995fce1b57263e56, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 2128975297}
+  m_SourcePrefab: {fileID: 100100000, guid: 78b281bcf2c617f4995fce1b57263e56, type: 3}
 --- !u!1001 &1558428795
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -28202,6 +28877,38 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4555914592605674089, guid: ee5e000eb4482b8488e2110149d57fb2, type: 3}
   m_PrefabInstance: {fileID: 1605244655}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1608798639
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1608798640}
+  m_Layer: 11
+  m_Name: Player
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1608798640
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1608798639}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 7.38852, y: 0, z: 2.6637}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 2128975292}
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1609343281
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -28217,6 +28924,10 @@ PrefabInstance:
     - target: {fileID: 684774920784202352, guid: 452ac13bae1c1f64c979b1277ae111b2, type: 3}
       propertyPath: m_LocalPosition.y
       value: -0.03523
+      objectReference: {fileID: 0}
+    - target: {fileID: 3514875982397117241, guid: 452ac13bae1c1f64c979b1277ae111b2, type: 3}
+      propertyPath: m_Layer
+      value: 14
       objectReference: {fileID: 0}
     - target: {fileID: 8392879694812404215, guid: 452ac13bae1c1f64c979b1277ae111b2, type: 3}
       propertyPath: m_LocalScale.z
@@ -28265,6 +28976,10 @@ PrefabInstance:
     - target: {fileID: 9165580820555072333, guid: 452ac13bae1c1f64c979b1277ae111b2, type: 3}
       propertyPath: m_Name
       value: Sendero_lateral_camino_01 (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 9165580820555072333, guid: 452ac13bae1c1f64c979b1277ae111b2, type: 3}
+      propertyPath: m_Layer
+      value: 14
       objectReference: {fileID: 0}
     - target: {fileID: 9165580820555072333, guid: 452ac13bae1c1f64c979b1277ae111b2, type: 3}
       propertyPath: m_IsActive
@@ -29968,6 +30683,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1930970150}
     m_Modifications:
+    - target: {fileID: 3514875982397117241, guid: 452ac13bae1c1f64c979b1277ae111b2, type: 3}
+      propertyPath: m_Layer
+      value: 14
+      objectReference: {fileID: 0}
     - target: {fileID: 8392879694812404215, guid: 452ac13bae1c1f64c979b1277ae111b2, type: 3}
       propertyPath: m_LocalScale.x
       value: 70.72492
@@ -30019,6 +30738,10 @@ PrefabInstance:
     - target: {fileID: 9165580820555072333, guid: 452ac13bae1c1f64c979b1277ae111b2, type: 3}
       propertyPath: m_Name
       value: Sendero_lateral_camino_01 (38)
+      objectReference: {fileID: 0}
+    - target: {fileID: 9165580820555072333, guid: 452ac13bae1c1f64c979b1277ae111b2, type: 3}
+      propertyPath: m_Layer
+      value: 14
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -32249,6 +32972,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1930970150}
     m_Modifications:
+    - target: {fileID: 3514875982397117241, guid: 452ac13bae1c1f64c979b1277ae111b2, type: 3}
+      propertyPath: m_Layer
+      value: 14
+      objectReference: {fileID: 0}
     - target: {fileID: 8392879694812404215, guid: 452ac13bae1c1f64c979b1277ae111b2, type: 3}
       propertyPath: m_LocalScale.x
       value: 199.79543
@@ -32304,6 +33031,10 @@ PrefabInstance:
     - target: {fileID: 9165580820555072333, guid: 452ac13bae1c1f64c979b1277ae111b2, type: 3}
       propertyPath: m_Name
       value: Sendero_lateral_camino_01 (40)
+      objectReference: {fileID: 0}
+    - target: {fileID: 9165580820555072333, guid: 452ac13bae1c1f64c979b1277ae111b2, type: 3}
+      propertyPath: m_Layer
+      value: 14
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -32547,7 +33278,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1930970150}
-  m_Layer: 0
+  m_Layer: 14
   m_Name: Plataformas (Suelo)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -33654,8 +34385,16 @@ PrefabInstance:
       value: Camino (6)
       objectReference: {fileID: 0}
     - target: {fileID: 1961818923929140389, guid: c87ffd3d1e8c4ab49a446347f706a422, type: 3}
+      propertyPath: m_Layer
+      value: 14
+      objectReference: {fileID: 0}
+    - target: {fileID: 1961818923929140389, guid: c87ffd3d1e8c4ab49a446347f706a422, type: 3}
       propertyPath: m_IsActive
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4915479674179997424, guid: c87ffd3d1e8c4ab49a446347f706a422, type: 3}
+      propertyPath: m_Layer
+      value: 14
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -33960,8 +34699,16 @@ PrefabInstance:
       value: Camino (3)
       objectReference: {fileID: 0}
     - target: {fileID: 1961818923929140389, guid: c87ffd3d1e8c4ab49a446347f706a422, type: 3}
+      propertyPath: m_Layer
+      value: 14
+      objectReference: {fileID: 0}
+    - target: {fileID: 1961818923929140389, guid: c87ffd3d1e8c4ab49a446347f706a422, type: 3}
       propertyPath: m_IsActive
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4915479674179997424, guid: c87ffd3d1e8c4ab49a446347f706a422, type: 3}
+      propertyPath: m_Layer
+      value: 14
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -34494,8 +35241,16 @@ PrefabInstance:
       value: Camino (10)
       objectReference: {fileID: 0}
     - target: {fileID: 1961818923929140389, guid: c87ffd3d1e8c4ab49a446347f706a422, type: 3}
+      propertyPath: m_Layer
+      value: 14
+      objectReference: {fileID: 0}
+    - target: {fileID: 1961818923929140389, guid: c87ffd3d1e8c4ab49a446347f706a422, type: 3}
       propertyPath: m_IsActive
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4915479674179997424, guid: c87ffd3d1e8c4ab49a446347f706a422, type: 3}
+      propertyPath: m_Layer
+      value: 14
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -35966,6 +36721,98 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 1185035242723812895, guid: c87ffd3d1e8c4ab49a446347f706a422, type: 3}
   m_PrefabInstance: {fileID: 2119874579}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &2128975291 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 78b281bcf2c617f4995fce1b57263e56, type: 3}
+  m_PrefabInstance: {fileID: 1556191808}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &2128975292 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 78b281bcf2c617f4995fce1b57263e56, type: 3}
+  m_PrefabInstance: {fileID: 1556191808}
+  m_PrefabAsset: {fileID: 0}
+--- !u!136 &2128975295
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2128975291}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 0.044354636
+  m_Height: 0.10195108
+  m_Direction: 1
+  m_Center: {x: 0.0049327943, y: 0.049024723, z: 0.0007125802}
+--- !u!54 &2128975296
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2128975291}
+  serializedVersion: 5
+  m_Mass: 1
+  m_LinearDamping: 0
+  m_AngularDamping: 0.05
+  m_CenterOfMass: {x: 0, y: 0, z: 0}
+  m_InertiaTensor: {x: 1, y: 1, z: 1}
+  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ImplicitCom: 1
+  m_ImplicitTensor: 1
+  m_UseGravity: 0
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 1
+--- !u!114 &2128975297
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2128975291}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4a48da02f0ab7c646990cc6162aec88e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::TravesiaColombia.Player.PlayerController
+  _currentState: 0
+  _moveSpeed: 5
+  _sprintMultiplier: 1.5
+  _jumpForce: 10
+  _fallMultiplier: 2.5
+  _lowJumpMultiplier: 2
+  _allowDoubleJump: 1
+  _groundCheck: {fileID: 0}
+  _groundCheckRadius: 0.2
+  _groundLayer:
+    serializedVersion: 2
+    m_Bits: 0
+  _coyoteTime: 0.15
+  _jumpBufferTime: 0.1
+  _currentLives: 3
+  _invincibilityTime: 1.5
+  _knockbackForce: 5
+  _flyDuration: 8
+  _flapForce: 7
+  _flyGravityMult: 1.5
 --- !u!1001 &2131554897
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -36198,6 +37045,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1930970150}
     m_Modifications:
+    - target: {fileID: 3514875982397117241, guid: 452ac13bae1c1f64c979b1277ae111b2, type: 3}
+      propertyPath: m_Layer
+      value: 14
+      objectReference: {fileID: 0}
     - target: {fileID: 8392879694812404215, guid: 452ac13bae1c1f64c979b1277ae111b2, type: 3}
       propertyPath: m_LocalScale.x
       value: 52.096184
@@ -36249,6 +37100,10 @@ PrefabInstance:
     - target: {fileID: 9165580820555072333, guid: 452ac13bae1c1f64c979b1277ae111b2, type: 3}
       propertyPath: m_Name
       value: Sendero_lateral_camino_01 (31)
+      objectReference: {fileID: 0}
+    - target: {fileID: 9165580820555072333, guid: 452ac13bae1c1f64c979b1277ae111b2, type: 3}
+      propertyPath: m_Layer
+      value: 14
       objectReference: {fileID: 0}
     - target: {fileID: 9165580820555072333, guid: 452ac13bae1c1f64c979b1277ae111b2, type: 3}
       propertyPath: m_IsActive
@@ -36427,8 +37282,16 @@ PrefabInstance:
       value: Camino (1)
       objectReference: {fileID: 0}
     - target: {fileID: 1961818923929140389, guid: c87ffd3d1e8c4ab49a446347f706a422, type: 3}
+      propertyPath: m_Layer
+      value: 14
+      objectReference: {fileID: 0}
+    - target: {fileID: 1961818923929140389, guid: c87ffd3d1e8c4ab49a446347f706a422, type: 3}
       propertyPath: m_IsActive
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4915479674179997424, guid: c87ffd3d1e8c4ab49a446347f706a422, type: 3}
+      propertyPath: m_Layer
+      value: 14
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -36605,6 +37468,14 @@ PrefabInstance:
     - target: {fileID: 1765206831166718200, guid: 8ee3332b85b244e479f3e9cb4685036e, type: 3}
       propertyPath: m_Name
       value: Plataforma_01
+      objectReference: {fileID: 0}
+    - target: {fileID: 1765206831166718200, guid: 8ee3332b85b244e479f3e9cb4685036e, type: 3}
+      propertyPath: m_Layer
+      value: 14
+      objectReference: {fileID: 0}
+    - target: {fileID: 4355795291895384912, guid: 8ee3332b85b244e479f3e9cb4685036e, type: 3}
+      propertyPath: m_Layer
+      value: 14
       objectReference: {fileID: 0}
     - target: {fileID: 8048794548295573991, guid: 8ee3332b85b244e479f3e9cb4685036e, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
@@ -36896,6 +37767,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1930970150}
     m_Modifications:
+    - target: {fileID: 3514875982397117241, guid: 452ac13bae1c1f64c979b1277ae111b2, type: 3}
+      propertyPath: m_Layer
+      value: 14
+      objectReference: {fileID: 0}
     - target: {fileID: 8392879694812404215, guid: 452ac13bae1c1f64c979b1277ae111b2, type: 3}
       propertyPath: m_LocalScale.x
       value: 88.543175
@@ -36949,6 +37824,10 @@ PrefabInstance:
       value: Sendero_lateral_camino_01
       objectReference: {fileID: 0}
     - target: {fileID: 9165580820555072333, guid: 452ac13bae1c1f64c979b1277ae111b2, type: 3}
+      propertyPath: m_Layer
+      value: 14
+      objectReference: {fileID: 0}
+    - target: {fileID: 9165580820555072333, guid: 452ac13bae1c1f64c979b1277ae111b2, type: 3}
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
@@ -36968,6 +37847,10 @@ PrefabInstance:
     - target: {fileID: 1463840340133887265, guid: 81cc0eac87405154d855f57465a39904, type: 3}
       propertyPath: m_Name
       value: CuevaCamino
+      objectReference: {fileID: 0}
+    - target: {fileID: 1463840340133887265, guid: 81cc0eac87405154d855f57465a39904, type: 3}
+      propertyPath: m_Layer
+      value: 14
       objectReference: {fileID: 0}
     - target: {fileID: 2241468407346194331, guid: 81cc0eac87405154d855f57465a39904, type: 3}
       propertyPath: m_LocalPosition.x
@@ -37008,6 +37891,10 @@ PrefabInstance:
     - target: {fileID: 2241468407346194331, guid: 81cc0eac87405154d855f57465a39904, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3671718753054306814, guid: 81cc0eac87405154d855f57465a39904, type: 3}
+      propertyPath: m_Layer
+      value: 14
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -37172,9 +38059,17 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1930970150}
     m_Modifications:
+    - target: {fileID: 1730334551073778281, guid: 97c4ca99845753a4eaef422861001cd6, type: 3}
+      propertyPath: m_Layer
+      value: 14
+      objectReference: {fileID: 0}
     - target: {fileID: 6160600698567449446, guid: 97c4ca99845753a4eaef422861001cd6, type: 3}
       propertyPath: m_Name
       value: Camino2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6160600698567449446, guid: 97c4ca99845753a4eaef422861001cd6, type: 3}
+      propertyPath: m_Layer
+      value: 14
       objectReference: {fileID: 0}
     - target: {fileID: 6788342035294355932, guid: 97c4ca99845753a4eaef422861001cd6, type: 3}
       propertyPath: m_LocalScale.x
@@ -37948,6 +38843,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1930970150}
     m_Modifications:
+    - target: {fileID: 717508310718078919, guid: 1ada14fd4dda2aa4d98ce8817ac64142, type: 3}
+      propertyPath: m_Layer
+      value: 14
+      objectReference: {fileID: 0}
     - target: {fileID: 6155876267778950561, guid: 1ada14fd4dda2aa4d98ce8817ac64142, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
@@ -37955,6 +38854,10 @@ PrefabInstance:
     - target: {fileID: 7095498080600538986, guid: 1ada14fd4dda2aa4d98ce8817ac64142, type: 3}
       propertyPath: m_Name
       value: Sendero_lateral_camino_02
+      objectReference: {fileID: 0}
+    - target: {fileID: 7095498080600538986, guid: 1ada14fd4dda2aa4d98ce8817ac64142, type: 3}
+      propertyPath: m_Layer
+      value: 14
       objectReference: {fileID: 0}
     - target: {fileID: 7580566724535739856, guid: 1ada14fd4dda2aa4d98ce8817ac64142, type: 3}
       propertyPath: m_LocalScale.x
@@ -38025,6 +38928,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: "Plataforma_Peque\xF1a1"
       objectReference: {fileID: 0}
+    - target: {fileID: 367394421226763222, guid: 710de25d371204043bf05dbc34f692a2, type: 3}
+      propertyPath: m_Layer
+      value: 14
+      objectReference: {fileID: 0}
     - target: {fileID: 1032151057404143980, guid: 710de25d371204043bf05dbc34f692a2, type: 3}
       propertyPath: m_LocalScale.x
       value: 40.533295
@@ -38081,6 +38988,10 @@ PrefabInstance:
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
       objectReference: {fileID: 2100000, guid: a10aee125ae55ce41a08e88361a58842, type: 2}
+    - target: {fileID: 7324777840512150866, guid: 710de25d371204043bf05dbc34f692a2, type: 3}
+      propertyPath: m_Layer
+      value: 14
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -38331,6 +39242,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Agua
       objectReference: {fileID: 0}
+    - target: {fileID: 1671025138926340773, guid: bfd27402cefaf1c419f7b1c8337a665d, type: 3}
+      propertyPath: m_Layer
+      value: 14
+      objectReference: {fileID: 0}
     - target: {fileID: 2926378764481525457, guid: bfd27402cefaf1c419f7b1c8337a665d, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
@@ -38548,6 +39463,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Camino1
       objectReference: {fileID: 0}
+    - target: {fileID: 2655557342053111193, guid: d6e1fa0aa4558704fbdbf9a3609f498f, type: 3}
+      propertyPath: m_Layer
+      value: 14
+      objectReference: {fileID: 0}
     - target: {fileID: 3427731870516891427, guid: d6e1fa0aa4558704fbdbf9a3609f498f, type: 3}
       propertyPath: m_LocalScale.x
       value: 55.854965
@@ -38620,6 +39539,10 @@ PrefabInstance:
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
       objectReference: {fileID: 2100000, guid: a10aee125ae55ce41a08e88361a58842, type: 2}
+    - target: {fileID: 5401698592937483118, guid: d6e1fa0aa4558704fbdbf9a3609f498f, type: 3}
+      propertyPath: m_Layer
+      value: 14
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -38760,6 +39683,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: "Plataforma_Peque\xF1a2 (1)"
       objectReference: {fileID: 0}
+    - target: {fileID: 1736004700721860630, guid: b8c1d727dd763564eb557720c5f71b81, type: 3}
+      propertyPath: m_Layer
+      value: 14
+      objectReference: {fileID: 0}
+    - target: {fileID: 6168355756327653392, guid: b8c1d727dd763564eb557720c5f71b81, type: 3}
+      propertyPath: m_Layer
+      value: 14
+      objectReference: {fileID: 0}
     - target: {fileID: 7023183768761643815, guid: b8c1d727dd763564eb557720c5f71b81, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
@@ -38898,13 +39829,24 @@ PrefabInstance:
       value: Camino
       objectReference: {fileID: 0}
     - target: {fileID: 1961818923929140389, guid: c87ffd3d1e8c4ab49a446347f706a422, type: 3}
+      propertyPath: m_Layer
+      value: 14
+      objectReference: {fileID: 0}
+    - target: {fileID: 1961818923929140389, guid: c87ffd3d1e8c4ab49a446347f706a422, type: 3}
       propertyPath: m_IsActive
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4915479674179997424, guid: c87ffd3d1e8c4ab49a446347f706a422, type: 3}
+      propertyPath: m_Layer
+      value: 14
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 1961818923929140389, guid: c87ffd3d1e8c4ab49a446347f706a422, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1320106941}
   m_SourcePrefab: {fileID: 100100000, guid: c87ffd3d1e8c4ab49a446347f706a422, type: 3}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
@@ -38918,3 +39860,4 @@ SceneRoots:
   - {fileID: 1267656752}
   - {fileID: 2076352402}
   - {fileID: 88205489}
+  - {fileID: 1608798640}
