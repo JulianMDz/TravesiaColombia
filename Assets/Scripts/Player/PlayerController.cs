@@ -5,22 +5,31 @@ using TravesiaColombia.Core;
 namespace TravesiaColombia.Player
 {
     /// <summary>
-    /// Controlador principal del jugador. Maneja movimiento, salto, daño y estado.
-    /// Se comunica con InputManager via eventos y publica al EventBus.
+    /// Controlador de jugador optimizado — solo Idle, Run, Jump, Flying
+    ///
+    /// Parámetros de Animator:
+    ///   isRunning  (Bool)   — movimiento horizontal en suelo
+    ///   isJumping  (Bool)   — saltando/cayendo en el aire
+    ///   isFlying   (Bool)   — hongo activo (Flappy Bird)
+    ///
+    /// Estados ignorados por ahora (Hurt, Dead, Falling → se manejan internamente):
+    ///   - Hurt:    parpadeo visual pero sin animación de dolor
+    ///   - Dead:    parado sin animación específica
+    ///   - Falling: se representa con isJumping=true cuando cae
     /// </summary>
     public class PlayerController : MonoBehaviour
     {
-        // ── Estados ──────────────────────────────────────────────────────────
+        // ── Estados internos (sin animaciones separadas) ──────────────────────
         public enum PlayerState { Idle, Running, Jumping, Falling, Hurt, Dead, Flying }
 
-        [Header("Estado")]
+        [Header("Estado actual")]
         [SerializeField] private PlayerState _currentState = PlayerState.Idle;
         public PlayerState CurrentState => _currentState;
 
         // ── Referencias ──────────────────────────────────────────────────────
         private Rigidbody _rb;
-        private SpriteRenderer _spriteRenderer;
         private Animator _animator;
+        private SpriteRenderer _spriteRenderer;
 
         // ── Movimiento horizontal ────────────────────────────────────────────
         [Header("Movimiento")]
@@ -32,7 +41,7 @@ namespace TravesiaColombia.Player
 
         // ── Salto ────────────────────────────────────────────────────────────
         [Header("Salto")]
-        [SerializeField] private float _jumpForce = 12f;
+        [SerializeField] private float _jumpForce = 10f;
         [SerializeField] private float _fallMultiplier = 2.5f;
         [SerializeField] private float _lowJumpMultiplier = 2f;
         [SerializeField] private bool _allowDoubleJump = true;
@@ -50,7 +59,7 @@ namespace TravesiaColombia.Player
         private bool _wasGrounded;
 
         // ── Coyote Time & Jump Buffer ────────────────────────────────────────
-        [Header("Coyote Time & Buffer")]
+        [Header("Coyote Time y Jump Buffer")]
         [SerializeField] private float _coyoteTime = 0.15f;
         [SerializeField] private float _jumpBufferTime = 0.1f;
 
@@ -66,28 +75,52 @@ namespace TravesiaColombia.Player
         private bool _isInvincible;
         private Coroutine _invincibilityCoroutine;
 
-        // ── Power-Up Vuelo ───────────────────────────────────────────────────
+        // ── Power-Up Vuelo (Flappy Bird) ─────────────────────────────────────
+        [Header("Vuelo — Flappy Bird")]
+        [SerializeField] private float _flyDuration = 8f;
+        [SerializeField] private float _flapForce = 7f;
+        [SerializeField] private float _flyGravityMult = 1.5f;
+
         private bool _isFlying;
-        private float _flyingTimeLeft;
+        private float _flyTimeLeft;
+        private bool _flapRequested;
 
         // ── Visual ───────────────────────────────────────────────────────────
         private bool _facingRight = true;
+
+        // ── Hashes de parámetros Animator ─────────────────────────────────────
+        private static readonly int AnimIsRunning = Animator.StringToHash("isRunning");
+        private static readonly int AnimIsJumping = Animator.StringToHash("isJumping");
+        private static readonly int AnimIsFlying = Animator.StringToHash("isFlying");
 
         // ─────────────────────────────────────────────────────────────────────
 
         private void Awake()
         {
             _rb = GetComponent<Rigidbody>();
-            _spriteRenderer = GetComponent<SpriteRenderer>();
             _animator = GetComponent<Animator>();
+            _spriteRenderer = GetComponent<SpriteRenderer>();
+
+            if (_rb == null)
+            {
+                Debug.LogError("[PlayerController] Falta Rigidbody");
+                return;
+            }
+
+            _rb.constraints = RigidbodyConstraints.FreezePositionZ
+                            | RigidbodyConstraints.FreezeRotationX
+                            | RigidbodyConstraints.FreezeRotationY;
 
             if (_groundCheck == null)
             {
                 GameObject gc = new GameObject("GroundCheck");
                 gc.transform.SetParent(transform);
-                gc.transform.localPosition = new Vector3(0, -0.5f, 0);
+                gc.transform.localPosition = new Vector3(0f, -0.6f, 0f);
                 _groundCheck = gc.transform;
             }
+
+            if (_groundLayer.value == 0)
+                _groundLayer = LayerMask.GetMask("Ground");
         }
 
         private void OnEnable()
@@ -119,18 +152,20 @@ namespace TravesiaColombia.Player
             CheckGroundStatus();
             UpdateCoyoteTime();
             UpdateJumpBuffer();
+            UpdateFlyTimer();
             UpdateState();
             UpdateAnimator();
         }
 
         private void FixedUpdate()
         {
-            ApplyMovement();
-            ApplyGravityModifiers();
-            ProcessJump();
+            if (_isFlying)
+                ApplyFlyingPhysics();
+            else
+                ApplyNormalPhysics();
         }
 
-        // ── Input Handlers ───────────────────────────────────────────────────
+        // ── Input ────────────────────────────────────────────────────────────
 
         private void HandleMove(Vector2 input)
         {
@@ -140,6 +175,14 @@ namespace TravesiaColombia.Player
 
         private void HandleJump()
         {
+            if (_currentState == PlayerState.Dead) return;
+
+            if (_isFlying)
+            {
+                _flapRequested = true;
+                return;
+            }
+
             if (IsBlocked()) return;
             _jumpRequested = true;
             _jumpBufferCounter = _jumpBufferTime;
@@ -151,64 +194,101 @@ namespace TravesiaColombia.Player
             _isSprinting = !_isSprinting;
         }
 
-        // ── Movement ─────────────────────────────────────────────────────────
+        // ── Física normal ────────────────────────────────────────────────────
+
+        private void ApplyNormalPhysics()
+        {
+            ApplyMovement();
+            ApplyGravityModifiers();
+            ProcessJump();
+        }
 
         private void ApplyMovement()
         {
-            if (IsBlocked()) return;
+            if (IsBlocked() || _rb == null) return;
 
-            float speed = _moveSpeed;
-            if (_isSprinting && IsGrounded) speed *= _sprintMultiplier;
+            float speed = _isSprinting && IsGrounded
+                ? _moveSpeed * _sprintMultiplier
+                : _moveSpeed;
 
-            Vector3 targetVelocity = new Vector3(_moveInput * speed, _rb.linearVelocity.y, 0);
-            _rb.linearVelocity = targetVelocity;
+            _rb.linearVelocity = new Vector3(_moveInput * speed, _rb.linearVelocity.y, 0f);
 
-            if (_moveInput > 0 && !_facingRight) Flip();
-            else if (_moveInput < 0 && _facingRight) Flip();
+            if (_moveInput > 0.01f && !_facingRight) Flip();
+            else if (_moveInput < -0.01f && _facingRight) Flip();
         }
 
-        private void Flip()
+        private void ApplyGravityModifiers()
         {
-            _facingRight = !_facingRight;
-            Vector3 scale = transform.localScale;
-            scale.x *= -1;
-            transform.localScale = scale;
-        }
+            if (_rb == null) return;
 
-        // ── Jump ─────────────────────────────────────────────────────────────
+            if (_rb.linearVelocity.y < 0f)
+            {
+                _rb.linearVelocity += Vector3.up * Physics.gravity.y
+                    * (_fallMultiplier - 1f) * Time.fixedDeltaTime;
+            }
+            else if (_rb.linearVelocity.y > 0f
+                  && InputManager.Instance != null
+                  && !InputManager.Instance.IsJumping)
+            {
+                _rb.linearVelocity += Vector3.up * Physics.gravity.y
+                    * (_lowJumpMultiplier - 1f) * Time.fixedDeltaTime;
+            }
+        }
 
         private void ProcessJump()
         {
-            if (_jumpBufferCounter > 0 && _coyoteTimeCounter > 0)
+            if (_rb == null) return;
+
+            if (_jumpBufferCounter > 0f && _coyoteTimeCounter > 0f)
             {
-                PerformJump();
-                _jumpBufferCounter = 0;
+                ExecuteJump();
+                _jumpBufferCounter = 0f;
             }
             else if (_jumpRequested && _allowDoubleJump && _hasDoubleJump && !IsGrounded)
             {
-                PerformJump();
+                ExecuteJump();
                 _hasDoubleJump = false;
             }
 
             _jumpRequested = false;
         }
 
-        private void PerformJump()
+        private void ExecuteJump()
         {
-            _rb.linearVelocity = new Vector3(_rb.linearVelocity.x, _jumpForce, 0);
-            _coyoteTimeCounter = 0;
+            _rb.linearVelocity = new Vector3(_rb.linearVelocity.x, _jumpForce, 0f);
+            _coyoteTimeCounter = 0f;
             EventBus.Publish(new PlayerJumped());
         }
 
-        private void ApplyGravityModifiers()
+        private void Flip()
         {
-            if (_rb.linearVelocity.y < 0)
+            _facingRight = !_facingRight;
+            Vector3 s = transform.localScale;
+            s.x *= -1f;
+            transform.localScale = s;
+        }
+
+        // ── Física de vuelo (Flappy Bird) ────────────────────────────────────
+
+        private void ApplyFlyingPhysics()
+        {
+            if (_rb == null) return;
+
+            float speed = _moveSpeed * 0.8f;
+            _rb.linearVelocity = new Vector3(_moveInput * speed, _rb.linearVelocity.y, 0f);
+
+            if (_moveInput > 0.01f && !_facingRight) Flip();
+            else if (_moveInput < -0.01f && _facingRight) Flip();
+
+            if (_flapRequested)
             {
-                _rb.linearVelocity += Vector3.up * Physics.gravity.y * (_fallMultiplier - 1) * Time.fixedDeltaTime;
+                _rb.linearVelocity = new Vector3(_rb.linearVelocity.x, _flapForce, 0f);
+                _flapRequested = false;
             }
-            else if (_rb.linearVelocity.y > 0 && !InputManager.Instance.IsJumping)
+            else
             {
-                _rb.linearVelocity += Vector3.up * Physics.gravity.y * (_lowJumpMultiplier - 1) * Time.fixedDeltaTime;
+                _rb.linearVelocity += Vector3.up * Physics.gravity.y
+                    * (_flyGravityMult - 1f) * Time.fixedDeltaTime;
             }
         }
 
@@ -216,6 +296,8 @@ namespace TravesiaColombia.Player
 
         private void CheckGroundStatus()
         {
+            if (_groundCheck == null) return;
+
             _wasGrounded = IsGrounded;
             IsGrounded = Physics.CheckSphere(_groundCheck.position, _groundCheckRadius, _groundLayer);
 
@@ -228,16 +310,23 @@ namespace TravesiaColombia.Player
 
         private void UpdateCoyoteTime()
         {
-            if (IsGrounded)
-                _coyoteTimeCounter = _coyoteTime;
-            else
-                _coyoteTimeCounter -= Time.deltaTime;
+            _coyoteTimeCounter = IsGrounded
+                ? _coyoteTime
+                : _coyoteTimeCounter - Time.deltaTime;
         }
 
         private void UpdateJumpBuffer()
         {
-            if (_jumpBufferCounter > 0)
+            if (_jumpBufferCounter > 0f)
                 _jumpBufferCounter -= Time.deltaTime;
+        }
+
+        private void UpdateFlyTimer()
+        {
+            if (!_isFlying) return;
+            _flyTimeLeft -= Time.deltaTime;
+            if (_flyTimeLeft <= 0f)
+                _isFlying = false;
         }
 
         // ── State Machine ────────────────────────────────────────────────────
@@ -245,13 +334,13 @@ namespace TravesiaColombia.Player
         private void UpdateState()
         {
             if (_currentState == PlayerState.Dead) return;
-            if (_currentState == PlayerState.Hurt) return;
+            if (_currentState == PlayerState.Hurt) return; // Hurt es temporal, volverá a otro estado
 
             if (_isFlying)
                 _currentState = PlayerState.Flying;
-            else if (!IsGrounded && _rb.linearVelocity.y > 0.1f)
+            else if (!IsGrounded && _rb != null && _rb.linearVelocity.y > 0.1f)
                 _currentState = PlayerState.Jumping;
-            else if (!IsGrounded && _rb.linearVelocity.y < -0.1f)
+            else if (!IsGrounded && _rb != null && _rb.linearVelocity.y < -0.1f)
                 _currentState = PlayerState.Falling;
             else if (Mathf.Abs(_moveInput) > 0.01f)
                 _currentState = PlayerState.Running;
@@ -261,9 +350,9 @@ namespace TravesiaColombia.Player
 
         private bool IsBlocked()
         {
-            return _currentState == PlayerState.Dead ||
-                   _currentState == PlayerState.Hurt ||
-                   !InputManager.Instance.GameplayEnabled;
+            return _currentState == PlayerState.Dead
+                || _currentState == PlayerState.Hurt
+                || (InputManager.Instance != null && !InputManager.Instance.GameplayEnabled);
         }
 
         // ── Damage ───────────────────────────────────────────────────────────
@@ -276,28 +365,23 @@ namespace TravesiaColombia.Player
             EventBus.Publish(new PlayerHurt(_currentLives));
 
             if (_currentLives <= 0)
-            {
                 Die();
-            }
             else
-            {
-                StartCoroutine(HurtState(hitDirection));
-            }
+                StartCoroutine(HurtRoutine(hitDirection));
         }
 
-        private IEnumerator HurtState(Vector3 hitDirection)
+        private IEnumerator HurtRoutine(Vector3 hitDir)
         {
             _currentState = PlayerState.Hurt;
 
-            // Knockback
-            Vector3 knockback = new Vector3(hitDirection.x * _knockbackForce, _knockbackForce * 0.5f, 0);
-            _rb.linearVelocity = knockback;
+            if (_rb != null)
+                _rb.linearVelocity = new Vector3(hitDir.x * _knockbackForce, _knockbackForce * 0.5f, 0f);
 
-            // Invincibilidad
-            if (_invincibilityCoroutine != null) StopCoroutine(_invincibilityCoroutine);
+            if (_invincibilityCoroutine != null)
+                StopCoroutine(_invincibilityCoroutine);
             _invincibilityCoroutine = StartCoroutine(InvincibilityFlash());
 
-            yield return new WaitForSeconds(0.3f);
+            yield return new WaitForSeconds(0.35f);
 
             if (_currentState == PlayerState.Hurt)
                 _currentState = PlayerState.Idle;
@@ -310,56 +394,56 @@ namespace TravesiaColombia.Player
 
             while (elapsed < _invincibilityTime)
             {
-                _spriteRenderer.enabled = !_spriteRenderer.enabled;
+                if (_spriteRenderer != null)
+                    _spriteRenderer.enabled = !_spriteRenderer.enabled;
                 yield return new WaitForSeconds(0.1f);
                 elapsed += 0.1f;
             }
 
-            _spriteRenderer.enabled = true;
+            if (_spriteRenderer != null)
+                _spriteRenderer.enabled = true;
             _isInvincible = false;
         }
 
         private void Die()
         {
             _currentState = PlayerState.Dead;
-            _rb.linearVelocity = Vector3.zero;
+            if (_rb != null)
+                _rb.linearVelocity = Vector3.zero;
             EventBus.Publish(new PlayerDied());
         }
 
-        // ── Power-Ups ────────────────────────────────────────────────────────
+        // ── Power-Up Vuelo ────────────────────────────────────────────────────
 
         private void OnPowerUpActivated(PowerUpActivated e)
         {
-            if (e.type == PowerUpType.Vuelo)
-            {
-                _isFlying = true;
-                _flyingTimeLeft = e.duration;
-                StartCoroutine(FlyingMode(e.duration));
-            }
+            if (e.type != PowerUpType.Vuelo) return;
+
+            _isFlying = true;
+            _flyTimeLeft = e.duration > 0f ? e.duration : _flyDuration;
+            _flapRequested = false;
         }
 
-        private IEnumerator FlyingMode(float duration)
-        {
-            yield return new WaitForSeconds(duration);
-            _isFlying = false;
-        }
-
-        // ── Animator ─────────────────────────────────────────────────────────
+        // ── Animator — SOLO 3 parámetros ────────────────────────────────────
 
         private void UpdateAnimator()
         {
             if (_animator == null) return;
 
-            _animator.SetFloat("Speed", Mathf.Abs(_moveInput));
-            _animator.SetBool("IsGrounded", IsGrounded);
-            _animator.SetBool("IsJumping", _currentState == PlayerState.Jumping);
-            _animator.SetBool("IsFalling", _currentState == PlayerState.Falling);
-            _animator.SetBool("IsHurt", _currentState == PlayerState.Hurt);
-            _animator.SetBool("IsDead", _currentState == PlayerState.Dead);
-            _animator.SetBool("IsFlying", _isFlying);
+            // Solo tres parámetros — TODO lo demás (Falling, Hurt, Dead) se maneja 
+            // internamente en la máquina de estados pero NO tiene animaciones separadas
+
+            bool running = _currentState == PlayerState.Running;
+            bool jumping = _currentState == PlayerState.Jumping
+                        || _currentState == PlayerState.Falling; // Falling también activa Jump anim
+            bool flying = _currentState == PlayerState.Flying;
+
+            _animator.SetBool(AnimIsRunning, running);
+            _animator.SetBool(AnimIsJumping, jumping);
+            _animator.SetBool(AnimIsFlying, flying);
         }
 
-        // ── Collisions ───────────────────────────────────────────────────────
+        // ── Colisiones ────────────────────────────────────────────────────────
 
         private void OnTriggerEnter(Collider other)
         {
@@ -374,11 +458,9 @@ namespace TravesiaColombia.Player
 
         private void OnDrawGizmosSelected()
         {
-            if (_groundCheck != null)
-            {
-                Gizmos.color = IsGrounded ? Color.green : Color.red;
-                Gizmos.DrawWireSphere(_groundCheck.position, _groundCheckRadius);
-            }
+            if (_groundCheck == null) return;
+            Gizmos.color = IsGrounded ? Color.green : Color.red;
+            Gizmos.DrawWireSphere(_groundCheck.position, _groundCheckRadius);
         }
     }
 }
