@@ -100,6 +100,8 @@ namespace TravesiaColombia.Player
             _rb = GetComponent<Rigidbody>();
             _animator = GetComponent<Animator>();
             _spriteRenderer = GetComponent<SpriteRenderer>();
+    
+            transform.rotation = Quaternion.Euler(0f, 90f, 0f);
 
             if (_rb == null)
             {
@@ -263,9 +265,12 @@ namespace TravesiaColombia.Player
         private void Flip()
         {
             _facingRight = !_facingRight;
-            Vector3 s = transform.localScale;
-            s.x *= -1f;
-            transform.localScale = s;
+            // Modelo 3D necesita rotación en Y, no escala negativa
+            transform.rotation = Quaternion.Euler(
+                0f,
+                _facingRight ? 90f : -90f,
+                0f
+            );
         }
 
         // ── Física de vuelo (Flappy Bird) ────────────────────────────────────
