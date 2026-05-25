@@ -1,4 +1,4 @@
-using UnityEngine;
+﻿using UnityEngine;
 using TMPro;
 using UnityEngine.UI;
 
@@ -48,88 +48,55 @@ public class HUDController : MonoBehaviour
     {
         int minutes = Mathf.FloorToInt(timer / 60f);
         int seconds = Mathf.FloorToInt(timer % 60f);
-
         if (tiempoText != null)
-        {
             tiempoText.text = minutes.ToString("00") + ":" + seconds.ToString("00");
-        }
     }
 
+    // ── Getters para PauseMenuController ─────────────────────────────────────
+    public int GetCurrentScore() => currentScore;
+    public int GetCurrentLives() => currentLives;
+    public int GetCurrentPlumas() => currentPlumas;
+    public int GetCurrentHongos() => currentHongos;
+    public int GetCurrentEsmeraldas() => currentEsmeraldas;
+    public float GetCurrentTime() => timer;
+
+    // ── Setters / Updates ─────────────────────────────────────────────────────
     public void UpdateLives(int lives)
     {
         currentLives = lives;
-
-        if (vidaText != null)
-        {
-            vidaText.text = "VIDA";
-        }
-
+        if (vidaText != null) vidaText.text = "VIDA";
         for (int i = 0; i < heartImages.Length; i++)
-        {
             if (heartImages[i] != null)
-            {
                 heartImages[i].enabled = i < currentLives;
-            }
-        }
     }
 
     public void UpdateScore(int score)
     {
         currentScore = score;
-
-        if (scoreText != null)
-        {
-            scoreText.text = currentScore.ToString();
-        }
+        if (scoreText != null) scoreText.text = currentScore.ToString();
     }
 
     public void UpdatePlumas(int amount)
     {
         currentPlumas = amount;
-
-        if (plumaText != null)
-        {
-            plumaText.text = currentPlumas.ToString();
-        }
+        if (plumaText != null) plumaText.text = currentPlumas.ToString();
     }
 
     public void UpdateHongos(int amount)
     {
         currentHongos = amount;
-
-        if (hongoText != null)
-        {
-            hongoText.text = currentHongos.ToString();
-        }
+        if (hongoText != null) hongoText.text = currentHongos.ToString();
     }
 
     public void UpdateEsmeraldas(int amount)
     {
         currentEsmeraldas = amount;
-
-        if (esmeraldaText != null)
-        {
-            esmeraldaText.text = currentEsmeraldas.ToString();
-        }
+        if (esmeraldaText != null) esmeraldaText.text = currentEsmeraldas.ToString();
     }
 
-    public void AddPluma()
-    {
-        currentPlumas++;
-        UpdatePlumas(currentPlumas);
-    }
-
-    public void AddHongo()
-    {
-        currentHongos++;
-        UpdateHongos(currentHongos);
-    }
-
-    public void AddEsmeralda()
-    {
-        currentEsmeraldas++;
-        UpdateEsmeraldas(currentEsmeraldas);
-    }
+    public void AddPluma() { currentPlumas++; UpdatePlumas(currentPlumas); }
+    public void AddHongo() { currentHongos++; UpdateHongos(currentHongos); }
+    public void AddEsmeralda() { currentEsmeraldas++; UpdateEsmeraldas(currentEsmeraldas); }
 
     public void AddScore(int amount)
     {
@@ -144,13 +111,5 @@ public class HUDController : MonoBehaviour
         UpdateLives(currentLives);
     }
 
-    public void StopTimer()
-    {
-        timerRunning = false;
-    }
-
-    public float GetCurrentTime()
-    {
-        return timer;
-    }
+    public void StopTimer() => timerRunning = false;
 }
