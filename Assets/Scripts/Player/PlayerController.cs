@@ -259,6 +259,12 @@ namespace TravesiaColombia.Player
         {
             _rb.linearVelocity = new Vector3(_rb.linearVelocity.x, _jumpForce, 0f);
             _coyoteTimeCounter = 0f;
+
+            if (AudioManager.Instance != null)
+            {
+                AudioManager.Instance.PlayJump();
+            }
+
             EventBus.Publish(new PlayerJumped());
         }
 
