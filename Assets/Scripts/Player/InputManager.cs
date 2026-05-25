@@ -134,5 +134,20 @@ namespace TravesiaColombia.Player
         private void OnGamePaused(GamePaused e) => DisableGameplayInput();
         private void OnGameResumed(GameResumed e) => EnableGameplayInput();
         private void OnGameOver(GameOver e) => DisableGameplayInput();
+
+        /// <summary>Dispara el evento de movimiento desde controles externos (móvil).</summary>
+        public void SimulateMove(Vector2 input)
+        {
+            MoveInput = input;
+            OnMove?.Invoke(input);
+        }
+
+        /// <summary>Dispara el evento de salto desde controles externos (móvil).</summary>
+        public void SimulateJump()
+        {
+            OnJump?.Invoke();
+        }
     }
+
+
 }

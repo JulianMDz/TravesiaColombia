@@ -25,7 +25,7 @@ TagManager:
   - Ground
   - Enemy
   - Hazard
-  - 
+  - Trap
   - 
   - 
   - 
@@ -77,7 +77,7 @@ TagManager:
   - name: 'Hazard '
     uniqueID: 1284674517
     locked: 0
-  - name: ff
+  - name: Trap
     uniqueID: 3683614619
     locked: 0
   m_RenderingLayers:

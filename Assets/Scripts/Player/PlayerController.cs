@@ -71,6 +71,7 @@ namespace TravesiaColombia.Player
         [SerializeField] private int _currentLives = 3;
         [SerializeField] private float _invincibilityTime = 1.5f;
         [SerializeField] private float _knockbackForce = 5f;
+        [SerializeField] private Transform _spawnPoint;
 
         private bool _isInvincible;
         private Coroutine _invincibilityCoroutine;
@@ -393,6 +394,12 @@ namespace TravesiaColombia.Player
             _invincibilityCoroutine = StartCoroutine(InvincibilityFlash());
 
             yield return new WaitForSeconds(0.35f);
+
+            if (_spawnPoint != null)
+            {
+                transform.position = _spawnPoint.position;
+                if (_rb != null) _rb.linearVelocity = Vector3.zero;
+            }
 
             if (_currentState == PlayerState.Hurt)
                 _currentState = PlayerState.Idle;

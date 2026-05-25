@@ -2,10 +2,8 @@
 using UnityEngine.SceneManagement;
 using TMPro;
 using UnityEngine.UI;
-
-#if ENABLE_INPUT_SYSTEM
 using UnityEngine.InputSystem;
-#endif
+
 
 public class PauseMenuController : MonoBehaviour
 {
@@ -35,6 +33,11 @@ public class PauseMenuController : MonoBehaviour
 
         Time.timeScale = 1f;
         isPaused = false;
+
+        // Habilitar Enhanced Touch para Android
+#if ENABLE_INPUT_SYSTEM
+    UnityEngine.InputSystem.EnhancedTouch.EnhancedTouchSupport.Enable();
+#endif
     }
 
     private void Update()
@@ -42,12 +45,13 @@ public class PauseMenuController : MonoBehaviour
         bool escapePressed = false;
 
 #if ENABLE_INPUT_SYSTEM
-        if (Keyboard.current != null && Keyboard.current.escapeKey.wasPressedThisFrame)
-            escapePressed = true;
-#else
+    if (Keyboard.current != null && Keyboard.current.escapeKey.wasPressedThisFrame)
+        escapePressed = true;
+#endif
+
+        // Back button Android — funciona con ambos Input Systems
         if (Input.GetKeyDown(KeyCode.Escape))
             escapePressed = true;
-#endif
 
         if (escapePressed)
             TogglePause();
