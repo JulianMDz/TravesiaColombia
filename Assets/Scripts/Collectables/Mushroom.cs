@@ -24,12 +24,26 @@ public class Mushroom : MonoBehaviour
 
         _collected = true;
 
-        // Activa el modo vuelo en el PlayerController via EventBus
-        EventBus.Publish(new PowerUpActivated(PowerUpType.Vuelo, _flyDuration));
+        EventBus.Publish(
+            new PowerUpActivated(
+                PowerUpType.Vuelo,
+                _flyDuration
+            )
+        );
 
         if (_collectEffect != null)
-            Instantiate(_collectEffect, transform.position, Quaternion.identity);
+            Instantiate(
+                _collectEffect,
+                transform.position,
+                Quaternion.identity
+            );
 
-        Destroy(gameObject);
+        gameObject.SetActive(false);
+    }
+
+    public void ResetMushroom()
+    {
+        _collected = false;
+        gameObject.SetActive(true);
     }
 }
