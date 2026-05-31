@@ -52,7 +52,7 @@ namespace TravesiaColombia.Player
         // ── Ground Check ─────────────────────────────────────────────────────
         [Header("Ground Check")]
         [SerializeField] private Transform _groundCheck;
-        [SerializeField] private float _groundCheckRadius = 0.2f;
+        [SerializeField] private float _groundCheckRadius = 0.6f;
         [SerializeField] private LayerMask _groundLayer;
 
         public bool IsGrounded { get; private set; }
@@ -169,6 +169,7 @@ namespace TravesiaColombia.Player
         }
 
         // ── Input ────────────────────────────────────────────────────────────
+       
 
         private void HandleMove(Vector2 input)
         {
@@ -386,23 +387,62 @@ namespace TravesiaColombia.Player
         {
             _currentState = PlayerState.Hurt;
 
-            if (_rb != null)
-                _rb.linearVelocity = new Vector3(hitDir.x * _knockbackForce, _knockbackForce * 0.5f, 0f);
-
             if (_invincibilityCoroutine != null)
                 StopCoroutine(_invincibilityCoroutine);
-            _invincibilityCoroutine = StartCoroutine(InvincibilityFlash());
 
-            yield return new WaitForSeconds(0.35f);
+            _invincibilityCoroutine =
+                StartCoroutine(InvincibilityFlash());
+
+            // Salir completamente del modo vuelo
+            _isFlying = false;
+            _flyTimeLeft = 0f;
+            _flapRequested = false;
+
+            if (_animator != null)
+            {
+                _animator.SetBool("isFlying", false);
+                _animator.SetBool("isJumping", false);
+            }
 
             if (_spawnPoint != null)
             {
-                transform.position = _spawnPoint.position;
-                if (_rb != null) _rb.linearVelocity = Vector3.zero;
+                if (_rb != null)
+                {
+                    _rb.isKinematic = true;
+
+                    transform.position =
+                        _spawnPoint.position + Vector3.up * 1f;
+
+                    Mushroom[] mushrooms =
+                        FindObjectsByType<Mushroom>(
+                            FindObjectsInactive.Include,
+                            FindObjectsSortMode.None
+                        );
+
+                    foreach (var mushroom in mushrooms)
+                    {
+                        mushroom.ResetMushroom();
+                    }
+
+                    _rb.linearVelocity = Vector3.zero;
+                    _rb.angularVelocity = Vector3.zero;
+
+                    yield return null;
+
+                    _rb.isKinematic = false;
+                }
+                else
+                {
+                    transform.position =
+                        _spawnPoint.position + Vector3.up * 1f;
+                }
             }
 
-            if (_currentState == PlayerState.Hurt)
-                _currentState = PlayerState.Idle;
+            _moveInput = 0f;
+            _jumpRequested = false;
+            _flapRequested = false;
+
+            _currentState = PlayerState.Idle;
         }
 
         private IEnumerator InvincibilityFlash()
@@ -470,6 +510,27 @@ namespace TravesiaColombia.Player
                 Vector3 hitDir = (transform.position - other.transform.position).normalized;
                 TakeDamage(1, hitDir);
             }
+        }
+
+
+        private void OnCollisionEnter(Collision collision)
+        {
+            if (collision.gameObject.CompareTag("Hazard"))
+            {
+                Vector3 hitDir =
+                    (transform.position - collision.transform.position).normalized;
+
+                TakeDamage(1, hitDir);
+            }
+        }
+
+        public void SetCheckpoint(Transform checkpoint)
+        {
+            _spawnPoint = checkpoint;
+
+            Debug.Log(
+                $"[CHECKPOINT] Nuevo checkpoint guardado: {checkpoint.name}"
+            );
         }
 
         // ── Gizmos ───────────────────────────────────────────────────────────
